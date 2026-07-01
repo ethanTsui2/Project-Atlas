@@ -2,195 +2,179 @@
 
 ## Overview
 
-Project Atlas is a modular 4-degree-of-freedom (4-DOF) desktop robotic manipulator designed around affordability, modularity, and ease of manufacturing. The system uses an Arduino-based embedded controller, MG90S metal gear servos for actuation, potentiometers for manual control, push buttons for recording and playback, and an LCD1602 display for user feedback.
-
-The project is being developed in stages, beginning with breadboard prototyping and progressing toward a fully integrated perfboard-based embedded system housed within a custom-designed 3D printed robotic arm.
+Project Atlas is a modular 4-degree-of-freedom desktop robotic manipulator designed around affordability, modularity, and ease of manufacturing. The system combines mechanical design, embedded control, servo actuation, manual input, motion recording, and 3D-printed structure.
 
 ---
 
-# Overall System Architecture
+## Overall System Diagram
 
-```text
-                    +----------------------+
-                    |    5V 3A Power       |
-                    |      Supply          |
-                    +----------+-----------+
-                               |
-                               v
-                     +-------------------+
-                     | Power Distribution|
-                     +----+----------+---+
-                          |          |
-                 +--------+          +---------+
-                 |                             |
-                 v                             v
-         +---------------+            +----------------+
-         |  Arduino Uno  |            |   Servo Power  |
-         +-------+-------+            +--------+-------+
-                 |                             |
-        ---------------------        -------------------------
-        |        |         |         |    |    |    |        |
-        v        v         v         v    v    v    v        v
- Potentiometers Buttons LCD1602   Servo1 Servo2 Servo3 Servo4
-                 |
-                 v
-          Motion Recording
-            & Playback
+```mermaid
+flowchart TD
+    P[5V 3A Power Supply] --> PD[Power Distribution]
+
+    PD --> A[Arduino Uno]
+    PD --> S1[MG90S Servo 1]
+    PD --> S2[MG90S Servo 2]
+    PD --> S3[MG90S Servo 3]
+    PD --> S4[MG90S Servo 4]
+
+    POT[4x 10k Potentiometers] --> A
+    BTN[2x Push Buttons] --> A
+    LCD[LCD1602 Display] --> A
+
+    A --> SIG[Servo Signal Outputs]
+    SIG --> S1
+    SIG --> S2
+    SIG --> S3
+    SIG --> S4
+
+    S1 --> ARM[4-DOF Robotic Arm]
+    S2 --> ARM
+    S3 --> ARM
+    S4 --> ARM
 ```
 
 ---
 
-# Mechanical Architecture
+## Mechanical Architecture
 
-The robotic arm consists of four independent rotational joints.
-
-```text
-Base
- │
- ├── Shoulder
- │
- ├── Elbow
- │
- ├── Wrist
- │
- └── Gripper
+```mermaid
+flowchart TD
+    B[Base] --> SH[Shoulder Joint]
+    SH --> EL[Elbow Joint]
+    EL --> WR[Wrist Joint]
+    WR --> GR[Gripper]
 ```
 
-## Mechanical Subsystems
-
-| Subsystem | Description |
-|------------|-------------|
-| Base | Houses electronics and supports the arm |
+| Subsystem | Purpose |
+|---|---|
+| Base | Supports the robot and houses electronics |
 | Shoulder Joint | Primary lifting joint |
 | Elbow Joint | Extends and retracts the arm |
 | Wrist Joint | Adjusts end-effector orientation |
 | Gripper | Grasps objects |
-| Controller Panel | Holds potentiometers, LCD, and buttons |
+| Controller Panel | Holds potentiometers, buttons, and LCD |
 
 ---
 
-# Electrical Architecture
+## Electrical Architecture
 
-## Inputs
-
-- Four 10k potentiometers
-- Two push buttons
-
-## Controller
-
-- Arduino Uno (development)
-- Arduino Nano (planned final version)
-
-## Outputs
-
-- Four MG90S servo motors
-- LCD1602 display
+| Component | Role |
+|---|---|
+| Arduino Uno | Main development controller |
+| MG90S Servos | Joint actuation |
+| 10k Potentiometers | Manual joint input |
+| Push Buttons | Save/playback control |
+| LCD1602 | User feedback |
+| 5V 3A Power Supply | External power source |
+| Perfboard | Final electronics platform |
 
 ---
 
-# Firmware Architecture
+## Power Architecture
 
-The firmware operates in four primary stages.
-
-```text
-Read Potentiometers
-        │
-        ▼
-Convert to Servo Angles
-        │
-        ▼
-Drive Servos
-        │
-        ▼
-Save / Playback Positions
-        │
-        ▼
-Update LCD Display
+```mermaid
+flowchart TD
+    PS[5V 3A Adapter] --> RAIL[5V Power Rail]
+    RAIL --> SERVO[Servo Power Bus]
+    RAIL --> ARD[Arduino 5V]
+    SERVO --> M1[Servo 1]
+    SERVO --> M2[Servo 2]
+    SERVO --> M3[Servo 3]
+    SERVO --> M4[Servo 4]
+    GND[Common Ground] --> ARD
+    GND --> SERVO
 ```
 
-### Firmware Modes
+### Power Design Notes
+
+- Servos are powered directly from the external 5V supply.
+- Arduino and servo power must share a common ground.
+- USB power is used only during development.
+- The Arduino should not power all servos through its onboard 5V regulator.
+- A large capacitor will be placed across the servo power rail to reduce voltage dips.
+
+---
+
+## Firmware Architecture
+
+```mermaid
+flowchart TD
+    START[Start] --> READ[Read Potentiometers]
+    READ --> FILTER[Smooth Analog Input]
+    FILTER --> MAP[Map Input to Servo Angles]
+    MAP --> DRIVE[Drive Servos]
+    DRIVE --> MODE{Mode?}
+
+    MODE --> MANUAL[Manual Control]
+    MODE --> RECORD[Record Position]
+    MODE --> PLAYBACK[Playback Saved Positions]
+
+    RECORD --> SAVE[Store Servo Angles]
+    PLAYBACK --> MOVE[Move Through Saved Sequence]
+
+    SAVE --> LCD[Update LCD]
+    MOVE --> LCD
+    MANUAL --> LCD
+```
+
+---
+
+## Firmware Modes
 
 | Mode | Function |
-|--------|----------|
+|---|---|
 | Manual | Potentiometers directly control each servo |
-| Record | Saves current arm position |
-| Playback | Replays saved motion sequence |
+| Record | Saves the current arm position |
+| Playback | Replays saved motion positions |
 | Pause | Stops playback while retaining saved positions |
 
 ---
 
-# Power Architecture
+## User Interface
+
+| Component | Function |
+|---|---|
+| Potentiometer 1 | Base or shoulder control |
+| Potentiometer 2 | Shoulder or elbow control |
+| Potentiometer 3 | Wrist control |
+| Potentiometer 4 | Gripper control |
+| Button 1 | Save position |
+| Button 2 | Play/pause sequence |
+| LCD1602 | Displays mode, saved count, and status |
+
+Example display:
 
 ```text
-5V 3A Adapter
-      │
-      ├──────── Servo 1
-      ├──────── Servo 2
-      ├──────── Servo 3
-      ├──────── Servo 4
-      │
-      └──────── Arduino
+Mode: Manual
+Saved: 03
 ```
 
-### Design Notes
-
-- Servos are powered directly from the external 5V supply.
-- Arduino shares a common ground with the servo power.
-- USB power is used only during development.
-- A large electrolytic capacitor is placed across the servo power rail to reduce voltage dips.
-
 ---
 
-# Software Components
-
-| Component | Purpose |
-|------------|----------|
-| Servo Library | Controls servo motors |
-| Analog Input | Reads potentiometers |
-| EEPROM (Future) | Stores recorded positions |
-| LCD Library | Displays system status |
-
----
-
-# Development Versions
+## Development Versions
 
 | Version | Description |
-|-----------|------------|
-| V0.1 | Single-servo breadboard testing |
+|---|---|
+| V0.1 | Single-servo breadboard proof of concept |
 | V0.2 | Four-servo breadboard prototype |
-| V0.3 | Perfboard electronics |
-| V1.0 | Complete robotic arm |
-| V2.0 | Future improvements |
+| V0.3 | Perfboard electronics and LCD integration |
+| V1.0 | Complete 3D-printed robotic arm |
+| V2.0 | Future upgrades such as custom PCB or inverse kinematics |
 
 ---
 
-# Future Improvements
-
-Potential upgrades include:
-
-- Arduino Nano
-- Custom PCB
-- ESP32 wireless control
-- Bluetooth interface
-- Inverse kinematics
-- ROS compatibility
-- Camera-based vision
-- Higher torque servos
-- Bearing-supported joints
-
----
-
-# System Summary
+## System Summary
 
 | Category | Selection |
-|-----------|-----------|
+|---|---|
 | Degrees of Freedom | 4 |
-| Controller | Arduino Uno (Development) |
-| Final Controller | Arduino Nano |
+| Controller | Arduino Uno |
+| Future Controller | Arduino Nano |
 | Actuators | MG90S Metal Gear Servos |
-| Manual Control | Four 10k Potentiometers |
+| Manual Control | 10k Potentiometers |
 | User Interface | LCD1602 + Push Buttons |
 | Manufacturing | FDM 3D Printing |
 | CAD Software | SolidWorks |
-| Programming | Arduino IDE (C++) |
-| External Power | 5V 3A Adapter |
+| Programming | Arduino IDE / C++ |
+| Power | 5V 3A External Supply |
