@@ -6,7 +6,7 @@
 
 ### Objective
 
-Prepare project repository and validate servo control.
+Add verified MG90S reference CAD model to the repository.
 
 ### Completed
 
@@ -23,6 +23,6 @@ Prepare project repository and validate servo control.
 
 ### Next Steps
 
-- Measure MG90S servo.
-- Create accurate CAD model.
-- Begin mechanical design.
+- Test one MG90S servo with Arduino.
+- Create first custom servo mounting bracket.
+- Begin electronics bring-up.
