@@ -8,13 +8,6 @@ This folder contains all CAD models used in Project Atlas.
 
 The initial MG90S CAD model was created by **Nicolas Corona** and downloaded from GrabCAD.
 
-## Reference Components
-
-Third-party reference CAD models used for purchased components are stored in:
-
-```text
-CAD/Reference_Components/
-
 **Model:**
 MG90S Micro Servo Motor – High Detail CAD Model (Internal Gears & Motor Included)
 
