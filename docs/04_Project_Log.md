@@ -1,28 +1,25 @@
-# Project Log
-
----
-
 ## 2026-07-01
 
 ### Objective
 
-Add verified MG90S reference CAD model to the repository.
+Validate MG90S servo operation and confirm usable rotation range.
 
 ### Completed
 
-- Created GitHub repository.
-- Organized documentation.
-- Tested SG90 servo with Arduino Uno.
-- Verified potentiometer control.
-- Ordered MG90S servos and remaining hardware.
+- Connected one MG90S servo to Arduino Uno.
+- Uploaded servo test code.
+- Verified that the servo rotates through approximately 180 degrees.
+- Confirmed smooth motion with no noticeable jitter or delay.
+- Confirmed the MG90S servo is suitable for Project Atlas joint actuation.
 
-### Problems
+### Observations
 
-- Servo jitter due to loose jumper wires.
-- USB power insufficient for final system.
+- The MG90S servo performed as expected.
+- The servo must be centered before attaching the horn for accurate joint alignment.
+- The advertised 180-degree travel was confirmed during testing.
 
 ### Next Steps
 
-- Test one MG90S servo with Arduino.
-- Create first custom servo mounting bracket.
-- Begin electronics bring-up.
+- Test servo using external 5V 3A power supply.
+- Control one MG90S servo with a potentiometer.
+- Begin CAD design of the first servo mounting bracket.
