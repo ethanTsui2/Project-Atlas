@@ -22,3 +22,10 @@ The model is used as a dimensional reference for integration into Project Atlas.
 ---
 
 All custom robotic arm components, brackets, joints, and assemblies are original designs created specifically for Project Atlas.
+
+## Reference Components
+
+Third-party reference CAD models used for purchased components are stored in:
+
+```text
+CAD/Reference_Components/
