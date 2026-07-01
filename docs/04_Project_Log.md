@@ -22,7 +22,7 @@ Verify that the MG90S servo operates correctly before beginning CAD design.
 - Potentiometer ends → 5V and GND
 
 ### Results
-✅ Servo rotated smoothly through its full operating range.
+Servo rotated smoothly through its full operating range.
 
 - No noticeable jitter.
 - No communication delay.
