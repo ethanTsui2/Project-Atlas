@@ -124,6 +124,10 @@ Detailed engineering documentation can be found in the `docs/` folder.
 - Modular end-effector
 - Expandable firmware architecture
 
+- ## Acknowledgements
+
+Some reference CAD models used for standard commercial components (such as the MG90S servo) are credited within the corresponding project folders. All custom mechanical designs for Project Atlas are original.
+
 ---
 
 ## License
