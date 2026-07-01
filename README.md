@@ -1,64 +1,131 @@
 # Project Atlas
 
-**Project Atlas** is a modular 4-DOF robotic manipulator engineered from scratch using SolidWorks, Arduino, embedded systems, and additive manufacturing.
+A modular 4-DOF robotic manipulator engineered from scratch using SolidWorks, Arduino, embedded systems, and additive manufacturing.
 
-## Project Status
+---
+
+## Project Overview
+
+Project Atlas is a fully custom robotic arm designed to strengthen my skills in mechanical design, embedded systems, electronics, CAD, and rapid prototyping.
+
+Rather than building an existing kit, every major component—including the mechanical structure, electronics integration, firmware, and documentation—is being developed from scratch as an engineering portfolio project.
+
+---
+
+## Current Status
 
 🟢 Active Development
 
-Current phase: component testing and mechanical design.
+Current phase:
+- Electronics bring-up
+- Servo testing
+- Mechanical design
+
+---
 
 ## Objectives
 
-- Design a custom 3D-printed robotic arm
-- Use MG90S metal gear servos for joint actuation
-- Control the arm using potentiometers
-- Save and replay motion sequences
-- Integrate a 16x2 LCD user interface
-- Build reliable electronics using perfboard
-- Document the full engineering design process
+- Design a modular 4-DOF robotic arm
+- Develop custom 3D-printed joints in SolidWorks
+- Control four MG90S servos using potentiometers
+- Implement motion recording and playback
+- Design permanent perfboard electronics
+- Document the complete engineering process
 
-## Core Components
+---
 
-- Arduino Uno
-- MG90S servos
-- 10k potentiometers
-- 5V 3A power supply
-- 16x2 LCD display
-- M3 heat-set inserts and hardware
-- Custom 3D-printed structure
+## Core Hardware
+
+| Component | Description |
+|-----------|-------------|
+| Arduino Uno | Primary microcontroller |
+| MG90S Metal Gear Servos | Joint actuation |
+| 10k Potentiometers | Manual control |
+| LCD1602 | User interface |
+| Push Buttons | Record / Playback |
+| 5V 3A Power Supply | External power |
+| Perfboard | Permanent electronics |
+| 3D Printed Structure | Custom mechanical components |
+
+---
 
 ## Skills Demonstrated
 
-- Mechanical design
-- SolidWorks CAD
-- 3D printing
-- Servo control
-- Arduino programming
-- Electronics prototyping
+- Mechanical Design
+- CAD (SolidWorks)
+- Embedded Systems
+- Arduino Programming
+- Electronics Prototyping
+- Servo Control
 - Soldering
-- Engineering documentation
+- Design for Manufacturing (DFM)
+- Rapid Prototyping
+- Engineering Documentation
+- Git & GitHub
+
+---
 
 ## Development Roadmap
 
-- [x] Test one servo with one potentiometer
-- [ ] Model MG90S servo in CAD
-- [ ] Design first modular servo joint
-- [ ] Print and test first joint prototype
-- [ ] Design full robotic arm assembly
-- [ ] Build perfboard electronics
-- [ ] Add motion recording and playback
-- [ ] Add LCD interface
-- [ ] Perform testing and document results
+- [ ] Verify MG90S servo operation
+- [ ] Control one servo using a potentiometer
+- [ ] Test external 5V power system
+- [ ] Model MG90S servo in SolidWorks
+- [ ] Design first modular joint
+- [ ] Prototype full arm assembly
+- [ ] Build perfboard controller
+- [ ] Implement motion recording
+- [ ] Integrate LCD interface
+- [ ] Complete system testing
+
+---
 
 ## Repository Structure
 
 ```text
 Project-Atlas/
 ├── CAD/
+│   └── SolidWorks models and assemblies
+│
 ├── Electronics/
+│   └── Wiring diagrams and schematics
+│
 ├── Firmware/
-├── docs/
-├── Images/
-├── Manufacturing/
-└── Testing/
+│   └── Arduino source code
+│
+└── docs/
+    ├── BOM.md
+    ├── 01_Project_Requirements.md
+    ├── 02_System_Architecture.md
+    ├── 03_Engineering_Decisions.md
+    └── 04_Project_Log.md
+```
+
+---
+
+## Documentation
+
+Detailed engineering documentation can be found in the `docs/` folder.
+
+- Bill of Materials
+- System Architecture
+- Engineering Decisions
+- Development Log
+- Project Requirements
+
+---
+
+## Planned Features
+
+- Manual joint control
+- Motion recording
+- Motion playback
+- LCD menu interface
+- Modular end-effector
+- Expandable firmware architecture
+
+---
+
+## License
+
+Released under the MIT License.
