@@ -1,25 +1,38 @@
+# Project Log
+
+---
+
 ## 2026-07-01
 
 ### Objective
+Verify that the MG90S servo operates correctly before beginning CAD design.
 
-Validate MG90S servo operation and confirm usable rotation range.
+### Hardware Used
+- Arduino Uno
+- MG90S Metal Gear Servo
+- 10k Potentiometer
+- Breadboard
+- USB Power
 
-### Completed
+### Wiring
+- Servo signal → D9
+- Servo VCC → 5V
+- Servo GND → GND
+- Potentiometer center → A0
+- Potentiometer ends → 5V and GND
 
-- Connected one MG90S servo to Arduino Uno.
-- Uploaded servo test code.
-- Verified that the servo rotates through approximately 180 degrees.
-- Confirmed smooth motion with no noticeable jitter or delay.
-- Confirmed the MG90S servo is suitable for Project Atlas joint actuation.
+### Results
+✅ Servo rotated smoothly through its full operating range.
 
-### Observations
+- No noticeable jitter.
+- No communication delay.
+- Stable operation using Arduino USB power.
+- Servo responded proportionally to potentiometer input.
 
-- The MG90S servo performed as expected.
-- The servo must be centered before attaching the horn for accurate joint alignment.
-- The advertised 180-degree travel was confirmed during testing.
+### Test Setup
 
-### Next Steps
+<img width="768" height="1024" alt="image" src="https://github.com/user-attachments/assets/e768ee58-1796-4dfc-88dc-96e7f9f15881" />
 
-- Test servo using external 5V 3A power supply.
-- Control one MG90S servo with a potentiometer.
-- Begin CAD design of the first servo mounting bracket.
+
+### Notes
+This validates the selected actuator for Project Atlas and confirms compatibility with the Arduino control system.
