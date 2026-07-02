@@ -36,3 +36,28 @@ Servo rotated smoothly through its full operating range.
 
 ### Notes
 This validates the selected actuator for Project Atlas and confirms compatibility with the Arduino control system.
+
+## 2026-07-01 — External Power Validation
+
+### Objective
+
+Validate the external 5V 3A power supply for servo operation.
+
+### Hardware Used
+
+- Arduino Uno
+- MG90S Servo
+- 10k Potentiometer
+- ALITOVE 5V 3A Power Supply
+- Breadboard
+
+### Results
+
+- Servo successfully powered from the external supply.
+- Arduino was used only for the control signal.
+- Common ground between the Arduino and power supply was established.
+- Servo operation remained smooth with no noticeable jitter.
+
+### Conclusion
+
+The external power configuration is suitable for future multi-servo testing.
