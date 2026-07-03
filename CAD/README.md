@@ -27,21 +27,7 @@ All custom robotic arm components, brackets, joints, and assemblies are original
 
 Third-party reference CAD models used for purchased components are stored in:
 
-```text
-CAD/Reference_Components/
 
-## Current Progress
-
-### Prototype V1
-
-Completed
-
-- Base
-- Shoulder assembly
-- Upper arm
-- MG90S integration
-
-In Progress
 
 - Elbow
 - Wrist
