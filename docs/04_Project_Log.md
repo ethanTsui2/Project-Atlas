@@ -61,3 +61,28 @@ Validate the external 5V 3A power supply for servo operation.
 ### Conclusion
 
 The external power configuration is suitable for future multi-servo testing.
+
+## 2026-07-02
+
+### Objective
+
+Begin the mechanical design of Project Atlas using the verified MG90S servo model.
+
+### Completed
+
+- Imported and validated the MG90S CAD assembly.
+- Designed the first base prototype.
+- Designed the shoulder joint.
+- Designed the first upper arm link.
+- Created the first full assembly in SolidWorks.
+
+### Observations
+
+The initial assembly confirms that the overall packaging of the base, shoulder, and upper arm is feasible. Future iterations will focus on reducing weight, improving cable routing, and refining aesthetics.
+
+### Next Steps
+
+- Design elbow joint.
+- Design wrist joint.
+- Verify servo travel.
+- Prepare prototype for 3D printing.
