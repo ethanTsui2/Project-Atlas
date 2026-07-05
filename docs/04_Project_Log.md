@@ -86,3 +86,19 @@ The initial assembly confirms that the overall packaging of the base, shoulder, 
 - Design wrist joint.
 - Verify servo travel.
 - Prepare prototype for 3D printing.
+
+### Progress Update (2026-07-04)
+
+Completed today:
+
+- Redesigned the upper arm link for improved appearance and manufacturability.
+- Designed the first servo cover for the shoulder joint.
+- Integrated the cover into the assembly.
+- Designed and imported the gripper assembly for packaging validation.
+- Continued refining the overall mechanical layout of Prototype V1.
+
+Next:
+
+- Design the elbow joint.
+- Verify joint clearances.
+- Prepare the first printable prototype.
