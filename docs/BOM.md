@@ -19,19 +19,6 @@ Project Atlas is designed around affordable, commercially available components w
 
 ---
 
-## Purchased Cost Summary
-
-| Category | Cost |
-|---|---:|
-| Servos | $15.99 |
-| Potentiometers | $9.29 |
-| Power Supply | $7.59 |
-| Perfboard Kit | $9.99 |
-| Heat-Set Insert Kit | $14.98 |
-| **Total Purchased Cost** | **$57.84** |
-
----
-
 ## Existing Components
 
 | Item | Qty | Notes |
