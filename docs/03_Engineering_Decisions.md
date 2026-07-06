@@ -61,3 +61,26 @@ Initial hardware testing confirmed smooth servo operation and approximately 180 
 ### Tradeoff
 
 MG90S servos are heavier and draw more current than SG90 servos, requiring a dedicated external 5V power supply for multi-servo operation.
+
+# ED-006
+
+## Decision
+
+Prototype V1 will remain a 4-DOF robotic arm using MG90S servos.
+
+## Reason
+
+The first prototype focuses on validating mechanical fit, assembly tolerances, wiring, and overall functionality before increasing system complexity.
+
+Higher torque requirements were identified during CAD development, particularly at the shoulder and elbow joints.
+
+Rather than redesigning immediately, Prototype V1 will be assembled and tested to determine whether MG995 servos are necessary.
+
+## Future Work
+
+If testing confirms insufficient torque, Prototype V2 will introduce:
+
+- MG995 servos for high-load joints
+- possible 5-DOF wrist
+- updated power system
+- redesigned servo mounts
