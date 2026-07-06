@@ -53,3 +53,11 @@ Project Atlas is designed around affordable, commercially available components w
 - The project will use M3 hardware wherever possible.
 - The electronics will first be prototyped on a breadboard, then transferred to perfboard.
 - A 5V 3A external power supply is used because USB power is not reliable for multiple servos.
+
+## Design Evolution
+
+Prototype V1 was designed around MG90S micro servos for all joints.
+
+During CAD development and mechanical analysis, it became apparent that the shoulder and elbow joints may require additional torque once the complete arm, wrist, gripper, and payload are assembled.
+
+Prototype V2 will evaluate MG995 servos for the base and shoulder joints while retaining MG90S servos for the wrist and gripper to reduce weight.
