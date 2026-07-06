@@ -15,6 +15,7 @@ Project Atlas is designed around affordable, commercially available components w
 | 5V 3A Power Supply | 1 | $7.59 | $7.59 | Amazon | [Link](https://www.amazon.com/dp/B078RXZM4C?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1) | Ordered | External servo/electronics power |
 | Perfboard Kit | 1 | $9.99 | $9.99 | Amazon | [Link](https://www.amazon.com/dp/B0G8JLX1HR?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1) | Ordered | Permanent electronics board |
 | M3 Heat-Set Insert Kit with Screws | 1 | $14.98 | $14.98 | Amazon | [Link](https://www.amazon.com/dp/B0CMZL4T6J?ref=ppx_yo2ov_dt_b_fed_asin_title) | Ordered | Threaded inserts for 3D printed parts |
+| MG995 High Torque Servo Pack | 4 | $4.25 | $16.99 | Amazon | [Link]((https://www.amazon.com/dp/B07NQJ1VZ2?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)) | Ordered | High-torque base and shoulder joints (evaluation) |
 
 ---
 
