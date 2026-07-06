@@ -110,7 +110,36 @@ The robot is beginning to take shape as a complete manipulator. The updated arm 
 - Verify mechanical interference between moving joints.
 - Finalize Prototype V1 for printing.
 
-Next:
+# 2026-07-06
+
+## Objective
+
+Complete the first full CAD assembly of the 4-DOF robotic arm and evaluate the overall mechanical layout before physical testing.
+
+## Completed
+
+- Finished the complete 4-DOF robotic arm assembly.
+- Redesigned Link 1 with a cleaner structural profile.
+- Designed and integrated the wrist joint.
+- Designed the mechanical gripper assembly.
+- Added servo covers to improve appearance and cable protection.
+- Verified assembly alignment and overall joint placement.
+- Printed prototype components and confirmed MG90S servo fit.
+
+## Observations
+
+The CAD assembly successfully integrates all major mechanical components into a complete prototype.
+
+Although the MG90S servos fit correctly, the shoulder and elbow joints may require additional torque once the complete arm is assembled and lifting a payload.
+
+Four MG995 servos have been ordered for evaluation as a possible upgrade for the high-load joints.
+
+## Next Steps
+
+- Assemble the printed 4-DOF prototype.
+- Test shoulder and elbow torque under load.
+- Determine whether MG995 servos are required.
+- Begin Prototype V2 design if additional torque is needed.
 
 - Design the elbow joint.
 - Verify joint clearances.
