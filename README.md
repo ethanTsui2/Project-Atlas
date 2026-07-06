@@ -1,6 +1,6 @@
 # Project Atlas
 
-A modular 4-DOF robotic manipulator engineered from scratch using SolidWorks, Arduino, embedded systems, and additive manufacturing.
+modular robotic manipulator prototype engineered from scratch using SolidWorks, Arduino, embedded systems, and additive manufacturing.
 
 ---
 
@@ -64,20 +64,13 @@ Current phase:
 - Git & GitHub
 
 ---
+## Roadmap
 
-## Development Roadmap
-
-- [ ] Verify MG90S servo operation
-- [ ] Control one servo using a potentiometer
-- [ ] Test external 5V power system
-- [ ] Model MG90S servo in SolidWorks
-- [ ] Design first modular joint
-- [ ] Prototype full arm assembly
-- [ ] Build perfboard controller
-- [ ] Implement motion recording
-- [ ] Integrate LCD interface
-- [ ] Complete system testing
-
+- [x] Print initial 4-DOF prototype parts
+- [x] Verify MG90S servo fit
+- [ ] Test 4-DOF prototype under load
+- [ ] Evaluate MG995 servos for high-load joints
+- [ ] Decide between 4-DOF V1 and 5-DOF V2 architecture
 ---
 
 ## Repository Structure
