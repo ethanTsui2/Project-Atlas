@@ -12,17 +12,6 @@ Rather than building an existing kit, every major component—including the mech
 
 ---
 
-## Current Status
-
-🟢 Active Development
-
-Current phase:
-- Electronics bring-up
-- Servo testing
-- Mechanical design
-
----
-
 ## Objectives
 
 - Design a modular 4-DOF robotic arm
