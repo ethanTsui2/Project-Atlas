@@ -144,3 +144,27 @@ Four MG995 servos have been ordered for evaluation as a possible upgrade for the
 - Design the elbow joint.
 - Verify joint clearances.
 - Prepare the first printable prototype.
+
+## 2026-07-07 — Prototype V2 5-DOF Redesign
+
+### Objective
+Begin a more refined 5-DOF version of Project Atlas based on lessons from Prototype V1.
+
+### Completed
+- Created a new industrial-style arm layout.
+- Increased the robot from 4-DOF to 5-DOF.
+- Redesigned the arm with covered joints and smoother continuous surfaces.
+- Added enclosed joint housings to hide servo mechanisms.
+- Preserved access openings for future removable caps.
+- Continued refining servo fit and tolerances.
+
+### Observations
+Prototype V2 has a more original and professional appearance than Prototype V1. The design better hides the servo-driven structure and creates a cleaner industrial robot aesthetic. Some tolerance work is still needed around the servo pockets, and the gripper has not yet been added.
+
+### Next Steps
+- Add the gripper/claw assembly.
+- Add removable caps for exposed joint openings.
+- Finalize servo clearances.
+- Check range of motion and interference.
+- Prepare selected parts for test printing.
+  
