@@ -84,3 +84,14 @@ If testing confirms insufficient torque, Prototype V2 will introduce:
 - possible 5-DOF wrist
 - updated power system
 - redesigned servo mounts
+
+## ED-007
+
+### Decision
+Develop Prototype V2 as a refined 5-DOF robotic arm.
+
+### Reason
+Prototype V1 successfully validated the initial 4-DOF mechanical layout and MG90S servo fit. Prototype V2 improves the design by adding an additional wrist joint, enclosing the servo mechanisms, and creating a more original industrial-style form.
+
+### Tradeoff
+Prototype V2 is more visually polished and capable, but it is more complex to print, assemble, and service. Servo tolerances, cable routing, and removable access caps must be carefully designed before printing.
