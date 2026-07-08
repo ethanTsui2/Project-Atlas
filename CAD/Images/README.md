@@ -10,6 +10,4 @@ Prototype V1
 
 ### Prototype V2 — 5-DOF Redesign
 <img width="436" height="667" alt="image" src="https://github.com/user-attachments/assets/0a7c4800-3262-43e8-8b17-2580b9e020eb" />
-
-
 Prototype V2 introduces a more refined 5-DOF architecture with enclosed servo joints and smoother industrial-style surfaces.
