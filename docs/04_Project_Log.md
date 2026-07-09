@@ -167,4 +167,29 @@ Prototype V2 has a more original and professional appearance than Prototype V1. 
 - Finalize servo clearances.
 - Check range of motion and interference.
 - Prepare selected parts for test printing.
-  
+
+# 2026-07-08 — Prototype V2 Refinement
+
+## Objective
+
+Continue refining the Prototype V2 5-DOF robotic arm for manufacturability and assembly.
+
+## Completed
+
+- Designed removable screw covers for the shoulder, elbow, and base joints.
+- Improved servo mounting dimensions.
+- Refined servo pocket tolerances for improved assembly.
+- Continued preparing the design for FDM 3D printing.
+- Started printing the Prototype V2 base and base mount components.
+
+## Observations
+
+The addition of removable covers significantly improves the overall appearance while maintaining serviceability. Servo mounting features are becoming more manufacturing-ready, although final assembly validation is still required after printing.
+
+## Next Steps
+
+- Finish printing the remaining structural components.
+- Verify printed tolerances.
+- Install heat-set inserts.
+- Test servo fit inside Prototype V2.
+- Begin complete mechanical assembly.
