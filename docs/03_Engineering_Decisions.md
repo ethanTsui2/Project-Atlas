@@ -95,3 +95,20 @@ Prototype V1 successfully validated the initial 4-DOF mechanical layout and MG90
 
 ### Tradeoff
 Prototype V2 is more visually polished and capable, but it is more complex to print, assemble, and service. Servo tolerances, cable routing, and removable access caps must be carefully designed before printing.
+
+## ED-008
+
+### Decision
+
+Use removable cosmetic covers to conceal fasteners while maintaining access to internal servos.
+
+### Reason
+
+Earlier versions exposed screw heads and assembly hardware. Adding removable covers improves the overall industrial appearance without sacrificing serviceability.
+
+### Impact
+
+- Cleaner appearance
+- Easier maintenance
+- Improved cable management opportunities
+- Better protection for internal components
