@@ -187,7 +187,26 @@ Continue refining the Prototype V2 5-DOF robotic arm for manufacturability and a
 The addition of removable covers significantly improves the overall appearance while maintaining serviceability. Servo mounting features are becoming more manufacturing-ready, although final assembly validation is still required after printing.
 
 ## Next Steps
+## 2026-07-08 — Prototype V2 Tolerance Refinement
 
+### Objective
+Refine Prototype V2 for better servo fit, reduced joint exposure, and improved manufacturability.
+
+### Completed
+- Adjusted servo housing tolerances to improve fit.
+- Refined servo horn clearance to reduce exposed gaps between joints.
+- Performed a threaded insert hole test.
+- Made minor appearance updates to improve the overall design.
+- Verified the folded arm position does not create major joint collisions.
+
+### Observations
+Prototype V2 is becoming more manufacturing-ready. The servo housings now better match the physical components, and the reduced joint exposure makes the arm look more finished and intentional.
+
+### Next Steps
+- Perform mass and torque analysis for the shoulder and elbow joints.
+- Use SolidWorks mass properties to estimate printed link weights.
+- Compare required joint torque against MG995 torque capability.
+- Continue preparing parts for printing and assembly.
 - Finish printing the remaining structural components.
 - Verify printed tolerances.
 - Install heat-set inserts.
