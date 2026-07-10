@@ -112,3 +112,16 @@ Earlier versions exposed screw heads and assembly hardware. Adding removable cov
 - Easier maintenance
 - Improved cable management opportunities
 - Better protection for internal components
+## ED-009
+
+### Decision
+Refine Prototype V2 servo housings around measured hardware tolerances.
+
+### Reason
+The initial V2 geometry fit the overall arm layout, but the servo housings and horn openings needed adjustment to reduce exposed gaps and improve assembly fit.
+
+### Impact
+- Better servo fit inside enclosed housings
+- Cleaner joint appearance
+- Less exposed servo horn geometry
+- Improved readiness for 3D printing and assembly
