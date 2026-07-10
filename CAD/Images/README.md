@@ -17,3 +17,7 @@ Prototype V2 introduces a more refined 5-DOF architecture with enclosed servo jo
 <img width="605" height="877" alt="image" src="https://github.com/user-attachments/assets/8f7d1965-d373-4c9f-a834-62a5455ca003" />
 
 Prototype V2 focuses on industrial styling, enclosed joints, improved serviceability, and preparation for additive manufacturing.
+
+### Prototype V2 — Tolerance Refinement
+<img width="757" height="447" alt="image" src="https://github.com/user-attachments/assets/7b0aa321-7543-4b13-bdf9-37802aa77ed4" />
+Prototype V2 was refined to improve servo fit, reduce exposed horn geometry, and prepare the design for additive manufacturing.
