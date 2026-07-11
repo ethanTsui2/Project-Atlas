@@ -212,3 +212,122 @@ Prototype V2 is becoming more manufacturing-ready. The servo housings now better
 - Install heat-set inserts.
 - Test servo fit inside Prototype V2.
 - Begin complete mechanical assembly.
+
+## July 10, 2026 — PCA9685 Wiring and Multi-Servo Control Test
+
+### Objective
+
+Wire the Arduino Nano, PCA9685 servo driver, five potentiometers, and five servos so that each robotic arm joint can be controlled independently.
+
+### Components Used
+
+- Arduino Nano
+- PCA9685 16-channel PWM servo driver
+- ALITOVE 5 V, 10 A external power supply
+- Five potentiometers
+- Five servos
+- Two breadboards
+- Jumper wires
+- DC barrel-jack-to-screw-terminal adapter
+- USB cable for Arduino programming and logic power
+
+### Wiring Configuration
+
+The Arduino Nano communicates with the PCA9685 using I2C.
+
+| Arduino Nano | PCA9685 | Purpose |
+|---|---|---|
+| 5V | VCC | PCA9685 logic power |
+| GND | GND | Common ground |
+| A4 | SDA | I2C data |
+| A5 | SCL | I2C clock |
+
+The external 5 V power supply powers the servos through the PCA9685 screw terminal.
+
+| Power Supply | PCA9685 |
+|---|---|
+| Positive (+) | V+ |
+| Negative (-) | GND |
+
+The Arduino Nano remains powered through USB. The servos are not powered from the Nano.
+
+### Potentiometer Assignments
+
+| Potentiometer Input | Robot Joint |
+|---|---|
+| A0 | Base |
+| A1 | Elbow |
+| A2 | Wrist |
+| A3 | Gripper Pivot |
+| A6 | Gripper Jaws |
+
+Each potentiometer has:
+
+- One outside terminal connected to 5 V
+- The opposite outside terminal connected to GND
+- The center terminal connected to its assigned analog input
+
+### PCA9685 Servo Channel Assignments
+
+| PCA9685 Channel | Robot Joint |
+|---|---|
+| PWM0 | Base |
+| PWM1 | Elbow |
+| PWM2 | Wrist |
+| PWM3 | Gripper Pivot |
+| PWM4 | Gripper Jaws |
+
+For each servo connection:
+
+- Signal wire connects to the yellow PWM row
+- Positive wire connects to the red V+ row
+- Ground wire connects to the black GND row
+
+### Software
+
+The Arduino sketch uses:
+
+- `Wire.h`
+- `Adafruit_PWMServoDriver.h`
+- A PCA9685 output frequency of 50 Hz
+- Potentiometer readings from 0–1023
+- Servo angle mapping from 0–180 degrees
+- Pulse widths from approximately 650–2350 microseconds
+
+### Troubleshooting
+
+The first upload attempt failed because the Arduino IDE was configured for an Arduino Uno and an unavailable COM port.
+
+The problem was corrected by selecting:
+
+- Board: Arduino Nano
+- Processor: ATmega328P
+- The active COM port for the Nano
+
+During the initial external-power connection, smoke was briefly observed from the PCA9685 area. Power was disconnected immediately and the power-terminal wiring was checked before testing again. After correcting the connection, the PCA9685 and servo-control system operated.
+
+The board will continue to be monitored for:
+
+- Excessive heat
+- Burning smell
+- Servo jitter
+- Voltage drops
+- Unstable movement
+
+### Results
+
+- The Arduino Nano successfully communicated with the PCA9685.
+- The external 5 V supply successfully powered the servo rail.
+- The potentiometers provided individual joint-position inputs.
+- The PCA9685 generated control signals for the connected servos.
+- The basic five-axis manual control system is operational.
+
+### Next Steps
+
+- Test each servo and potentiometer individually.
+- Confirm that every potentiometer controls the intended joint.
+- Label all servo and potentiometer connections.
+- Determine safe minimum and maximum angles for each joint.
+- Prevent servos from reaching mechanical stops.
+- Mount and test the servos in the printed arm one joint at a time.
+- Add smoother servo movement and joint-specific calibration limits.
