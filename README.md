@@ -1,117 +1,95 @@
 # Project Atlas
 
-modular robotic manipulator prototype engineered from scratch using SolidWorks, Arduino, embedded systems, and additive manufacturing.
+Project Atlas is an ongoing robotics engineering portfolio focused on the design, fabrication, testing, and continuous improvement of robotic manipulators.
+
+Each design iteration is preserved as a complete engineering record containing its CAD models, assemblies, electronics, firmware, bill of materials, testing results, engineering analysis, and lessons learned.
+
+The purpose of Project Atlas is not only to build a functional robotic arm, but to document the progression from an accessible servo-driven prototype toward more capable robotic systems using improved actuators, gear reduction, sensing, and control.
 
 ---
 
-## Project Overview
+## Project Objectives
 
-Project Atlas is a fully custom robotic arm designed to strengthen my skills in mechanical design, embedded systems, electronics, CAD, and rapid prototyping.
-
-Rather than building an existing kit, every major component—including the mechanical structure, electronics integration, firmware, and documentation—is being developed from scratch as an engineering portfolio project.
-
----
-
-## Objectives
-
-- Design a modular 4-DOF robotic arm
-- Develop custom 3D-printed joints in SolidWorks
-- Control four MG90S servos using potentiometers
-- Implement motion recording and playback
-- Design permanent perfboard electronics
-- Document the complete engineering process
+- Design robotic manipulators from the ground up
+- Apply mechanical design, CAD, additive manufacturing, electronics, and embedded programming
+- Validate design decisions through physical testing and engineering analysis
+- Preserve each design iteration rather than replacing previous work
+- Document failures, limitations, and lessons learned
+- Use each completed version to define requirements for the next
+- Build a continuous engineering design portfolio
 
 ---
 
-## Core Hardware
+## Design Iterations
 
-| Component | Description |
-|-----------|-------------|
-| Arduino Uno | Primary microcontroller |
-| MG90S Metal Gear Servos | Joint actuation |
-| 10k Potentiometers | Manual control |
-| LCD1602 | User interface |
-| Push Buttons | Record / Playback |
-| 5V 3A Power Supply | External power |
-| Perfboard | Permanent electronics |
-| 3D Printed Structure | Custom mechanical components |
+| Version | Description | Status |
+|---|---|---|
+| [Atlas V1](Atlas-V1/) | 3D-printed robotic arm using hobby servos, Arduino control, and a PCA9685 servo driver | In development |
+| Atlas V2 | Planned robotic arm using higher-torque actuators and geared joints | Future concept |
+| Atlas V3 | Advanced robotic manipulator based on lessons from earlier versions | Future concept |
 
 ---
 
-## Skills Demonstrated
+## Atlas V1
 
-- Mechanical Design
-- CAD (SolidWorks)
-- Embedded Systems
-- Arduino Programming
-- Electronics Prototyping
-- Servo Control
-- Soldering
-- Design for Manufacturing (DFM)
-- Rapid Prototyping
-- Engineering Documentation
-- Git & GitHub
+Atlas V1 is the first official design iteration of Project Atlas.
+
+It is intended to validate:
+
+- Overall robotic-arm architecture
+- SolidWorks part and assembly workflow
+- Servo mounting and horn interfaces
+- FDM-manufactured structural components
+- Internal cable routing
+- Arduino-based servo control
+- PCA9685 integration
+- Joint range of motion
+- Torque and payload limitations
+- Assembly and maintenance access
+
+### Atlas V1 Hardware
+
+- 3 × MG995 servo motors
+- 2 × MG90S micro servo motors
+- Arduino Nano
+- PCA9685 16-channel PWM servo driver
+- External regulated servo power supply
+- 3D-printed structural components
+
+[View Atlas V1](Atlas-V1/)
 
 ---
-## Roadmap
 
-- [x] Print initial 4-DOF prototype parts
-- [x] Verify MG90S servo fit
-- [ ] Test 4-DOF prototype under load
-- [ ] Evaluate MG995 servos for high-load joints
-- [ ] Decide between 4-DOF V1 and 5-DOF V2 architecture
+## Future Development
+
+Future versions may explore:
+
+- Stepper motors
+- Cycloidal gearboxes
+- Planetary gearboxes
+- Dedicated bearings and output shafts
+- Closed-loop joint sensing
+- Custom motor-control electronics
+- Reduced backlash
+- Higher payload capacity
+- Modular end effectors
+- ROS integration
+- Computer vision
+- Autonomous manipulation
+
+These are development directions rather than confirmed requirements. Each future version will be based on testing and lessons learned from the previous design.
+
 ---
 
 ## Repository Structure
 
 ```text
 Project-Atlas/
-├── CAD/
-│   └── SolidWorks models and assemblies
-│
-├── Electronics/
-│   └── Wiring diagrams and schematics
-│
-├── Firmware/
-│   └── Arduino source code
-│
-└── docs/
-    ├── BOM.md
-    ├── 01_Project_Requirements.md
-    ├── 02_System_Architecture.md
-    ├── 03_Engineering_Decisions.md
-    └── 04_Project_Log.md
-```
-
----
-
-## Documentation
-
-Detailed engineering documentation can be found in the `docs/` folder.
-
-- Bill of Materials
-- System Architecture
-- Engineering Decisions
-- Development Log
-- Project Requirements
-
----
-
-## Planned Features
-
-- Manual joint control
-- Motion recording
-- Motion playback
-- LCD menu interface
-- Modular end-effector
-- Expandable firmware architecture
-
-- ## Acknowledgements
-
-Some reference CAD models used for standard commercial components (such as the MG90S servo) are credited within the corresponding project folders. All custom mechanical designs for Project Atlas are original.
-
----
-
-## License
-
-Released under the MIT License.
+├── README.md
+├── LICENSE
+└── Atlas-V1/
+    ├── README.md
+    ├── CAD/
+    ├── Electronics/
+    ├── Firmware/
+    └── Documentation/
