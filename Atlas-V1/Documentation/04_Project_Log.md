@@ -332,59 +332,143 @@ The board will continue to be monitored for:
 - Mount and test the servos in the printed arm one joint at a time.
 - Add smoother servo movement and joint-specific calibration limits.
 
-## 2026-07-14 — Full-Arm Servo Holding Test and Frame Redesign Decision
+## 2026-07-14 — Modular Architecture Redesign
 
-The major printed arm sections were assembled and connected through an MG995 servo joint.
+### Summary
 
-During the initial test, the MG995 successfully lifted the complete printed arm structure and maintained its position without dropping. This confirmed that the servo can support the current unloaded arm geometry.
+After completing the initial assembly and servo testing, the mechanical architecture of Atlas V1 was re-evaluated.
 
-A continuous buzzing sound was observed while the servo held the arm in position. The buzzing is likely caused by the servo repeatedly correcting its position against the gravitational load. Although the arm remained stable, the test indicates that the servo may have limited torque margin once the remaining components are installed.
+The original design integrated the servo mounting features directly into each structural arm link. While functional, this approach required redesigning and reprinting large portions of the robot whenever a link length or external geometry changed.
 
-The current test did not include:
+A new modular architecture has been adopted for future revisions.
 
-- Gripper payload
-- Wiring
-- Wire-management covers
-- Remaining fasteners
-- Additional electronics
-- Any external object held by the gripper
+---
 
-### Key Findings
+## Initial Servo Test
 
-- The MG995 can lift the current printed arm.
-- The servo can statically maintain the unloaded arm position.
-- No sudden position loss or joint collapse occurred.
-- The servo produced noticeable buzzing while holding the load.
-- The present design is functional but likely heavier and larger than necessary.
-- Adding a gearbox would increase complexity, backlash, part count, and assembly time.
-- Reducing the frame mass should lower the shoulder and elbow torque requirements without changing the electronics.
+The MG995 shoulder servo successfully lifted and supported the assembled printed arm.
 
-### Design Decision
+Observations:
 
-Rather than introducing a planetary or external gear reduction into Atlas V1, the next iteration will focus on redesigning the printed frame.
+- Successfully lifted the unloaded arm.
+- Maintained position without dropping.
+- Continuous buzzing was present while holding position.
+- No payload attached to the gripper.
+- Wiring, covers, and final hardware were not installed.
 
-The redesign will aim to:
+This demonstrated that the current design is mechanically functional but likely operating with limited torque margin.
 
-- Reduce link mass
-- Shorten unnecessary moment arms
-- Improve the visual continuity between joints
-- Reduce the external size of the arm
-- Preserve the current servo mounting dimensions
-- Preserve verified 3D-printing clearances
-- Maintain sufficient stiffness around the servo mounts
-- Improve wire routing and cover integration
+---
 
-The existing servo dimensions and fit tolerances are already known, which should make this redesign faster than the original modeling process.
+## Engineering Evaluation
 
-### Next Steps
+Rather than immediately introducing additional gear reductions or more powerful actuators, attention shifted toward reducing the structural mass of the arm.
 
-- Measure the mass of each current printed link
-- Identify thick or non-load-bearing regions
-- Create a lighter frame concept
-- Add internal ribs instead of thick solid walls
-- Reduce material farthest from the shoulder joint
-- Improve the transition between links and servo housings
-- Verify folded-position clearance
-- Compare original and redesigned part masses
-- Reprint only the redesigned structural components
-- Repeat the servo holding and payload test
+Analysis showed that reducing moving mass would improve:
+
+- Servo torque margin
+- Static holding performance
+- Thermal loading
+- Energy consumption
+- Print time
+- Material usage
+
+without increasing mechanical complexity.
+
+---
+
+## Major Design Decision
+
+Atlas V1 will transition to a modular joint architecture.
+
+Instead of integrating the servo directly into every printed arm section, each joint will be divided into separate functional modules.
+
+### 1. Atlas Joint Module
+
+The Joint Module becomes the permanent mechanical interface.
+
+Responsibilities:
+
+- Houses the servo
+- Maintains servo mounting geometry
+- Supports the output shaft
+- Provides attachment points for structural links
+- Maintains all verified clearances
+- Serves as the standardized interface between joints
+
+This component should rarely require redesign once validated.
+
+---
+
+### 2. Structural Link
+
+The Structural Link becomes an interchangeable load-carrying component.
+
+Responsibilities:
+
+- Connect adjacent joint modules
+- Carry bending loads
+- Minimize structural mass
+- Define overall arm length
+
+Multiple structural links can now be developed for different purposes without modifying the servo housing.
+
+Examples include:
+
+- Lightweight version
+- Long-reach version
+- Reinforced version
+- Experimental topology-optimized version
+
+---
+
+### 3. Cosmetic Shell
+
+An optional removable shell will provide the external appearance.
+
+Responsibilities:
+
+- Protect internal components
+- Improve aesthetics
+- Route wiring
+- Allow custom visual styles
+- Remain mechanically independent of the structural frame
+
+Because the shell is non-structural, it can be redesigned independently from the mechanics.
+
+---
+
+## Advantages
+
+The new architecture offers several engineering advantages.
+
+- Servo geometry becomes standardized.
+- Structural links become interchangeable.
+- Only modified components require reprinting.
+- Future experimentation becomes significantly faster.
+- Cosmetic updates no longer require mechanical redesign.
+- Creates a scalable platform for future Atlas generations.
+
+---
+
+## Long-Term Vision
+
+This modular philosophy establishes a common design language that can continue into Atlas V2.
+
+Future actuator technologies—including cycloidal reducers, planetary gearboxes, or other transmission systems—can replace the Joint Module while preserving the Structural Link and Shell interfaces.
+
+This allows Atlas to evolve from a single robotic arm into a modular robotics platform.
+
+---
+
+## Next Steps
+
+- Design Atlas Joint Module V1.
+- Define standardized mounting interface.
+- Design first lightweight Structural Link.
+- Compare link mass with previous design.
+- Verify structural stiffness.
+- Design removable cosmetic shell.
+- Assemble revised prototype.
+- Repeat servo holding and payload tests.
+- 
