@@ -331,3 +331,60 @@ The board will continue to be monitored for:
 - Prevent servos from reaching mechanical stops.
 - Mount and test the servos in the printed arm one joint at a time.
 - Add smoother servo movement and joint-specific calibration limits.
+
+## 2026-07-14 — Full-Arm Servo Holding Test and Frame Redesign Decision
+
+The major printed arm sections were assembled and connected through an MG995 servo joint.
+
+During the initial test, the MG995 successfully lifted the complete printed arm structure and maintained its position without dropping. This confirmed that the servo can support the current unloaded arm geometry.
+
+A continuous buzzing sound was observed while the servo held the arm in position. The buzzing is likely caused by the servo repeatedly correcting its position against the gravitational load. Although the arm remained stable, the test indicates that the servo may have limited torque margin once the remaining components are installed.
+
+The current test did not include:
+
+- Gripper payload
+- Wiring
+- Wire-management covers
+- Remaining fasteners
+- Additional electronics
+- Any external object held by the gripper
+
+### Key Findings
+
+- The MG995 can lift the current printed arm.
+- The servo can statically maintain the unloaded arm position.
+- No sudden position loss or joint collapse occurred.
+- The servo produced noticeable buzzing while holding the load.
+- The present design is functional but likely heavier and larger than necessary.
+- Adding a gearbox would increase complexity, backlash, part count, and assembly time.
+- Reducing the frame mass should lower the shoulder and elbow torque requirements without changing the electronics.
+
+### Design Decision
+
+Rather than introducing a planetary or external gear reduction into Atlas V1, the next iteration will focus on redesigning the printed frame.
+
+The redesign will aim to:
+
+- Reduce link mass
+- Shorten unnecessary moment arms
+- Improve the visual continuity between joints
+- Reduce the external size of the arm
+- Preserve the current servo mounting dimensions
+- Preserve verified 3D-printing clearances
+- Maintain sufficient stiffness around the servo mounts
+- Improve wire routing and cover integration
+
+The existing servo dimensions and fit tolerances are already known, which should make this redesign faster than the original modeling process.
+
+### Next Steps
+
+- Measure the mass of each current printed link
+- Identify thick or non-load-bearing regions
+- Create a lighter frame concept
+- Add internal ribs instead of thick solid walls
+- Reduce material farthest from the shoulder joint
+- Improve the transition between links and servo housings
+- Verify folded-position clearance
+- Compare original and redesigned part masses
+- Reprint only the redesigned structural components
+- Repeat the servo holding and payload test
