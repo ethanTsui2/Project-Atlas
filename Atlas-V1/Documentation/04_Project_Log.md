@@ -471,4 +471,167 @@ This allows Atlas to evolve from a single robotic arm into a modular robotics pl
 - Design removable cosmetic shell.
 - Assemble revised prototype.
 - Repeat servo holding and payload tests.
-- 
+
+# Project Log
+
+## Date
+July 15, 2026
+
+---
+
+# Atlas V1 Modular Joint Development
+
+## Overview
+
+Today's work focused on redesigning the original base joint into a reusable modular joint module.
+
+Rather than integrating the servo directly into the structural arm, the design now separates the robot into standardized joint modules that can be reused across multiple axes.
+
+This establishes the beginning of Atlas' modular mechanical architecture.
+
+---
+
+## Major Design Changes
+
+### Atlas Joint Module (AJM-01)
+
+Developed the first version of the Atlas Joint Module for the base rotation axis.
+
+Design objectives:
+
+- Reusable servo housing
+- Lightweight structural frame
+- Easy assembly
+- FDM optimized geometry
+- Future compatibility with improved drive systems
+
+The joint is designed as a split-body assembly allowing the MG995 servo to be installed between both printed halves.
+
+---
+
+### Structural Optimization
+
+Compared to the original design:
+
+- Reduced unnecessary material
+- Increased open structural regions
+- Added large load-carrying ribs
+- Improved stiffness-to-weight ratio
+- Simplified printability
+
+The frame now resembles a lightweight truss rather than a solid enclosure.
+
+---
+
+### Standardized Interface
+
+The top output interface was redesigned into a standardized circular mounting plate.
+
+Future structural links will attach to this interface rather than directly to the servo housing.
+
+This allows future arm lengths and shell designs to be changed independently from the joint module.
+
+---
+
+## Bearing Support Investigation
+
+Began investigating methods to reduce bending loads acting on the MG995 output shaft.
+
+Research included:
+
+- Standard deep groove bearings
+- Flanged miniature bearings
+- Separate support shafts
+- Keyed output shafts
+
+Selected the F688-2RS flanged bearing as the preferred support bearing.
+
+Bearing Specifications:
+
+- 8 mm Inner Diameter
+- 16 mm Outer Diameter
+- 5 mm Width
+- 18 mm Flange Diameter
+
+This bearing offers a compact solution while maintaining sufficient radial load capacity for Atlas V1.
+
+---
+
+## Future Output Shaft Concept
+
+Instead of relying solely on the servo spline, the current concept introduces:
+
+Servo Output
+
+↓
+
+Servo Horn
+
+↓
+
+Replaceable Support Pin
+
+↓
+
+Flanged Bearing
+
+↓
+
+Opposite Joint Housing
+
+The support pin is planned as a removable component, allowing future upgrades to steel shafts without redesigning the joint.
+
+---
+
+## CAD Improvements
+
+Implemented:
+
+- Split-body construction
+- Internal servo cavity
+- Lightweight rib structure
+- Circular output flange
+- Mounting bosses for assembly screws
+- Improved print orientation
+- Modular architecture
+
+---
+
+## Prototype Planning
+
+Prepared the first printable version of the joint.
+
+Goals of the first prototype:
+
+- Verify MG995 fit
+- Verify split-body assembly
+- Verify screw alignment
+- Evaluate overall stiffness
+- Confirm printability
+- Evaluate clearances before further refinement
+
+---
+
+## Engineering Lessons Learned
+
+Several important design principles became apparent during this redesign:
+
+- Design around load paths rather than solid geometry.
+- Modular interfaces simplify future iterations.
+- Removing material can improve both aesthetics and performance.
+- Bearings should support radial loads while servos primarily provide torque.
+- Split-body assemblies greatly simplify installation and maintenance.
+- Standardized joint modules provide a scalable architecture for future Atlas revisions.
+
+---
+
+## Next Steps
+
+- Print AJM-01 prototype
+- Verify MG995 installation
+- Test split-body assembly
+- Evaluate clearances
+- Design removable support pin
+- Integrate F688 bearing
+- Validate support shaft concept
+- Begin upper arm structural link design
