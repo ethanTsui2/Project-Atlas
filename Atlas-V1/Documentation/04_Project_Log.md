@@ -635,3 +635,40 @@ Several important design principles became apparent during this redesign:
 - Integrate F688 bearing
 - Validate support shaft concept
 - Begin upper arm structural link design
+
+## July 16, 2026 — Base Housing and Shoulder Support Revision B
+
+### Work completed
+
+- Revised the Atlas base housing to improve structural support for the shoulder assembly.
+- Added a reinforced internal center structure beneath the shoulder mount.
+- Added internal ribs to transfer loads from the shoulder support into the base housing.
+- Integrated the shoulder-support geometry with the rotating upper section of the base.
+- Maintained the existing Atlas vent and logo design language.
+- Reviewed servo-wire clearance inside the base housing.
+- Continued development of the dual-supported shoulder joint using an MG995 servo on one side and a bearing on the opposite side.
+
+### Design reasoning
+
+The previous shoulder mount relied more heavily on the top mounting surface. The revised design uses internal ribs and a reinforced center structure to create a more direct load path from the shoulder assembly into the base.
+
+The bearing-supported shoulder concept is intended to reduce radial and bending loads on the MG995 output shaft. The servo side will provide torque, while the opposite bearing side will support the arm pivot.
+
+### Current concerns and validation items
+
+- Verify concentric alignment between the servo output axis and bearing axis.
+- Add or increase fillets at the shoulder-support roots.
+- Verify minimum wall thickness around the triangular cutouts.
+- Confirm access to servo, horn, bearing, and shoulder-bolt fasteners.
+- Complete a rotational-clearance study before printing.
+- Finalize the servo-wire routing path.
+- Evaluate the strength of the internal support ribs.
+
+### Next steps
+
+- Finalize the bearing-side shoulder support.
+- Select the bearing and shoulder-bolt dimensions.
+- Begin the upper-arm link design.
+- Perform a folded and fully extended interference check.
+- Export updated STEP and STL files.
+- Prepare a prototype print of the base housing and shoulder support.
