@@ -23,12 +23,13 @@ An enclosed shell design was explored to hide the servos and wiring and create a
 
 This concept was not continued because it increased:
 
-- print complexity
+- size
 - material use
 - weight
-- assembly difficulty
+- printability
 - maintenance difficulty
 
+<img width="757" height="447" alt="image" src="https://github.com/user-attachments/assets/7b7d42e3-46ce-42fa-bf5f-48f2f45a9412" />
 
 
 ## Stage 3 — Lightweight Redesign
@@ -43,7 +44,8 @@ This redesign improved:
 - component access
 - overall appearance
 
-![Lightweight redesign](03-Lightweight-Redesign.png)
+<img width="1001" height="852" alt="image" src="https://github.com/user-attachments/assets/042616e0-f15c-4c31-8362-f50c67750ce0" />
+
 
 ## Stage 4 — Final Mechanical Version
 
@@ -60,7 +62,8 @@ The final Atlas V1 design includes:
 - removable servo covers
 - collision-checked motion in SolidWorks
 
-![Final version](04-Final-Version.png)
+<img width="1077" height="847" alt="image" src="https://github.com/user-attachments/assets/51e784d5-3f1b-4026-94e4-5e26c6f9fb96" />
+
 
 ## Main Lessons Learned
 
