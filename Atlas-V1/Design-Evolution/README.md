@@ -43,7 +43,7 @@ This redesign improved:
 - structural clarity
 - component access
 - overall appearance
-<img width="695" height="856" alt="image" src="https://github.com/user-attachments/assets/8591bddc-3f6e-41b9-b217-c097c2473358" />
+<img width="695" height="856" alt="image" src="https://github.com/user-attachments/assets/93c1c046-da12-4f34-bb67-2d4305fef6f7" />
 
 
 
