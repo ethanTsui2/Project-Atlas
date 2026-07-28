@@ -13,10 +13,10 @@ The values represent the theoretical properties of the CAD model using the verif
 | Link 2 Structure | PLA | 164.24 | 132452.17 | 0.00 | 72.44 | -34.82 | [View](Link-2-Mass-Properties.png) |
 | Complete End Effector | PLA |30.23 |24378.13 |410.32 | 894.39|1307.39 |[View](End-Effector-Mass-Properties.png)|
 | **Purchased Components** |||||||||
-| Shoulder MG995 Servo | Manufacturer | | | | | | |
-| Elbow MG995 Servo | Manufacturer | | | | | | |
-| Wrist MG90S Servo | Manufacturer | | | | | | |
-| Gripper MG90S Servo | Manufacturer | | | | | | |
+| Shoulder MG995 Servo | Manufacturer | 55  | | | | | |
+| Elbow MG995 Servo | Manufacturer |55  | | | | | |
+| Wrist MG90S Servo | Manufacturer | 13.4 | | | | | |
+| Gripper MG90S Servo | Manufacturer | 13.4 | | | | | |
 | **Estimated Components** |||||||||
 | Fasteners & Heat-Set Inserts | Steel / Brass | | | | | | |
 | Wiring | Copper / PVC | | | | | | |
