@@ -1,7 +1,6 @@
 # Atlas V1 Material Properties
 
 This document records the material data used for the preliminary engineering analysis of the 3D-printed Atlas V1 components.
-<img width="916" height="712" alt="image" src="https://github.com/user-attachments/assets/6d33053a-9557-4ec7-b5f9-c922b6af80fe" />
 
 
 ## Material Identification
@@ -52,7 +51,7 @@ This document records the material data used for the preliminary engineering ana
 | Elastic modulus | 2534 MPa | Anycubic TDS V3.0 |
 | Mass density | 1240 kg/m³ | Anycubic TDS V3.0 |
 | Tensile strength | 48 MPa | Anycubic TDS V3.0 |
-
+<img width="916" height="712" alt="image" src="https://github.com/user-attachments/assets/6d33053a-9557-4ec7-b5f9-c922b6af80fe" />
 ## Properties Not Provided by Anycubic
 
 The TDS does not provide:
