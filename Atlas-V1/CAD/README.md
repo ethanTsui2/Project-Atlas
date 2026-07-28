@@ -26,7 +26,7 @@ The current mechanical design is shown below.
 
 ---
 
-## Folded Configuration
+## Extended Configuration
 
 ![Atlas V1 Folded](Final-Assembly/Atlas-V1-Extended.png)
 
