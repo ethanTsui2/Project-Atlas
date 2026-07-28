@@ -7,7 +7,7 @@ The values represent the theoretical properties of the CAD model using the verif
 | Component | Material | Mass (g) | Volume (mm³) | COM X (mm) | COM Y (mm) | COM Z (mm) | Evidence |
 |:----------|:--------:|---------:|-------------:|-----------:|-----------:|-----------:|:--------:|
 | **Printed Components** |||||||||
-| Base Housing | PLA | 664.33 | 535753.64 | -0.5 | 4 | 19.66 | 0.56 |		[View](Base-Housing-Mass-Properties.png) |
+| Base Housing | PLA | 664.33 | 535753.64 | -0.54 | 19.66 | 0.56 | [View](Base-Housing-Mass-Properties.png) |
 | Shoulder Structure | PLA | | | | | | |
 | Link 1 Structure | PLA | 283.81 | 228876.24 | 582.93 | 991.96 | 1316.60 | [View](Link-1-Mass-Properties.png) |
 | Link 2 Structure | PLA | 164.24 | 132452.17 | 0.00 | 72.44 | -34.82 | [View](Link-2-Mass-Properties.png) |
