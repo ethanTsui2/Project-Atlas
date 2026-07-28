@@ -65,6 +65,23 @@ The TDS does not provide:
 - thermal conductivity
 - specific heat
 
+## Material Density Verification
+
+The custom Anycubic PLA material was temporarily assigned to the Atlas V1 base housing to verify the entered density.
+
+| Property | SolidWorks Result |
+|---|---:|
+| Assigned density | 1.24 g/cm³ |
+| Model volume | 535,753.64 mm³ |
+| Calculated solid-model mass | 664.33 g |
+
+The calculated value agrees with the expected relationship between model volume and the manufacturer-provided density.
+
+![Anycubic PLA density verification](Anycubic-PLA-Density-Verification.png)
+
+The SolidWorks result assumes that all modeled material regions are fully dense. Actual printed mass may be lower because slicer-generated infill is not represented in the CAD mass calculation. Bambu Studio estimates and physical measurements will therefore be recorded separately for load calculations and validation.
+
+
 Any additional values required for simulation will be obtained from separately cited technical sources and clearly identified as engineering assumptions rather than manufacturer-provided properties.
 
 ## Analysis Limitations
