@@ -93,4 +93,5 @@ Anycubic reports an X-Y tensile strength of 48 ± 5 MPa and a Z-direction tensil
 The Anycubic TDS also states that its values are intended for comparison rather than final design specifications. The numerical analysis will therefore be treated as preliminary and will later be validated through physical testing.
 
 ## Reference
-[Anycubic PLA Technical Data Sheet (Version 3.0)](References/Anycubic-PLA-TDS-Version-3.0.pdf)
+Anycubic. *Anycubic PLA Technical Data Sheet*, Version 3.0.  
+   [View the manufacturer technical data sheet](References/Anycubic-PLA-TDS-v3.0.pdf)
