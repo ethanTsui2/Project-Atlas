@@ -74,9 +74,4 @@ CAD/
 └── README.md
 ```
 
----
 
-
-- Elbow
-- Wrist
-- Gripper
