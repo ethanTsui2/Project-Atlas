@@ -20,6 +20,8 @@ The analysis is based on a frozen copy of the final Atlas V1 mechanical assembly
 5. Perform FEA on critical printed parts
 6. Validate results through physical testing
 
-## Important Note
+## Analysis Configuration
 
-Any design changes made after this baseline must be recorded before the calculations are updated.
+All static load calculations were performed using the maximum achievable extension of the Atlas V1 mechanism.
+
+The shoulder joint does not permit a perfectly horizontal upper arm due to mechanical interference designed into the joint. Therefore, the analysis uses the maximum reachable configuration, which represents the highest practical static loading condition for the current design.
