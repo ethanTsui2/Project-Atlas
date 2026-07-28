@@ -94,4 +94,4 @@ The Anycubic TDS also states that its values are intended for comparison rather 
 
 ## Reference
 
-[Anycubic PLA Technical Data Sheet, Version 3.0](References/Anycubic-PLA-TDS-Version-3.0.pdf)
+[Anycubic PLA Technical Data Sheet, Version 3.0](References/ANYCUBIC_TDS_PLA_V3.0.pdf)
