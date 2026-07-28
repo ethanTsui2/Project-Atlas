@@ -62,16 +62,24 @@ The current mechanical design is shown below.
 
 # Folder Contents
 
-```
+```text
 CAD/
-│
 ├── Final-Assembly/
-│
+│   └── Final CAD screenshots
+├── Source-Files/
+│   └── Native SolidWorks parts and assemblies
 ├── Reference_Components/
-│
-├── MG90S_Dimensions.md
+│   ├── MG995/
+│   └── MG90S/
+└── README.md
 │
 └── README.md
 ```
 
+```markdown
+## Source Files
+
+The `Source-Files` directory contains the complete SolidWorks assembly and its referenced components.
+
+The files were exported using SolidWorks Pack and Go to preserve assembly references and reduce the chance of missing-part errors.
 
