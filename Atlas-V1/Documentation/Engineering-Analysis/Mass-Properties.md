@@ -11,8 +11,7 @@ The values represent the theoretical properties of the CAD model using the verif
 | Shoulder Structure | PLA |196.29 |941582.43 |0.00 |40.84 |-0.06 | [View](Wrist-Structure-Mass-Properties.png)|
 | Link 1 Structure | PLA | 283.81 | 228876.24 | 582.93 | 991.96 | 1316.60 | [View](Link-1-Mass-Properties.png) |
 | Link 2 Structure | PLA | 164.24 | 132452.17 | 0.00 | 72.44 | -34.82 | [View](Link-2-Mass-Properties.png) |
-| Wrist Structure | PLA | | | | | | |
-| Gripper Structure | PLA | | | | | | |
+| Complete End Effector | PLA |30.23 |24378.13 |410.32 | 894.39|1307.39 |[View](End-Effector-Mass-Properties.png)|
 | **Purchased Components** |||||||||
 | Shoulder MG995 Servo | Manufacturer | | | | | | |
 | Elbow MG995 Servo | Manufacturer | | | | | | |
