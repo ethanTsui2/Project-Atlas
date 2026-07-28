@@ -22,5 +22,14 @@ The values represent the theoretical properties of the CAD model using the verif
 | Wiring | Copper / PVC | | | | | | |
 | Payload (Design Target) | Variable | | | | | | |
 
+> **Note:** Printed component properties were extracted from SolidWorks using the verified Anycubic PLA material. Servo masses are based on manufacturer specifications and will be replaced with measured values in future hardware validation if available.
 
+## Mass Summary
 
+| Category | Mass (g) |
+|-----------|---------:|
+| Printed Components | **1338.90** |
+| Servos | **136.80** |
+| Estimated Hardware | — |
+| Estimated Wiring | — |
+| **Estimated Total Robot Mass** | **1475.70 + hardware** |
