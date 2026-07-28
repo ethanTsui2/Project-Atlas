@@ -23,8 +23,5 @@ The values represent the theoretical properties of the CAD model using the verif
 | Wiring | Copper / PVC | | | | | | |
 | Payload (Design Target) | Variable | | | | | | |
 
-## Supporting Figures
 
-### Link 1 Printed Structure
 
-![Link 1 SolidWorks mass properties](Link-1-Mass-Properties.png)
