@@ -1,32 +1,80 @@
-# CAD Files
+# Atlas V1 CAD
 
-This folder contains all CAD models used in Project Atlas.
-
-## Third-Party Components
-
-### MG90S Servo Reference Model
-
-The initial MG90S CAD model was created by **Nicolas Corona** and downloaded from GrabCAD.
-
-**Model:**
-MG90S Micro Servo Motor – High Detail CAD Model (Internal Gears & Motor Included)
-
-**Author**
-Nicolas Corona
-
-**Source**
-https://grabcad.com/
-
-The model is used as a dimensional reference for integration into Project Atlas. Critical dimensions were verified against the physical MG90S servo before use.
+This folder contains the complete mechanical CAD design for **Project Atlas V1**, including the final assembly, reference components, and design resources used throughout development.
 
 ---
 
-All custom robotic arm components, brackets, joints, and assemblies are original designs created specifically for Project Atlas.
+# Final Assembly
 
-## Reference Components
+The current mechanical design is shown below.
 
-Third-party reference CAD models used for purchased components are stored in:
+## Isometric View
 
+![Atlas V1 Isometric](Final-Assembly/Atlas-V1-Isometric.png)
+
+---
+
+## Side View
+
+![Atlas V1 Side](Final-Assembly/Atlas-V1-Side.png)
+
+---
+
+## Top View
+
+![Atlas V1 Top](Final-Assembly/Atlas-V1-Top.png)
+
+---
+
+## Folded Configuration
+
+![Atlas V1 Folded](Final-Assembly/Atlas-V1-Extended.png)
+
+---
+
+# Mechanical Specifications
+
+| Component | Description |
+|------------|-------------|
+| Degrees of Freedom | 5 DOF |
+| Base Servo | MG995 |
+| Shoulder Servo | MG995 |
+| Elbow Servo | MG995 |
+| Wrist Servo | MG90S |
+| Gripper Servo | MG90S |
+| CAD Software | SolidWorks |
+| Manufacturing | FDM 3D Printing |
+
+---
+
+# Design Features
+
+- Lightweight ribbed arm links
+- Modular servo housings
+- Split-print construction
+- Internal cable routing
+- Collision-checked assembly
+- Heat-set insert mounting
+- Serviceable servo covers
+- Modular gripper assembly
+
+---
+
+# Folder Contents
+
+```
+CAD/
+│
+├── Final-Assembly/
+│
+├── Reference_Components/
+│
+├── MG90S_Dimensions.md
+│
+└── README.md
+```
+
+---
 
 
 - Elbow
