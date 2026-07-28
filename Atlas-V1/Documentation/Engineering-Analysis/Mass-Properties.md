@@ -1,16 +1,27 @@
 # Atlas V1 Mass Inventory
 
-The following table records the theoretical CAD mass properties of the major Atlas V1 assemblies.
+This table records the raw mass properties extracted directly from SolidWorks for the major Atlas V1 components.
 
-These values are extracted directly from SolidWorks using the verified Anycubic PLA material.
+The values represent the theoretical properties of the CAD model using the verified **Anycubic PLA V3.0** material. These measurements serve as the baseline dataset for the subsequent center-of-mass, torque, and finite element analyses.
 
-| Component | Mass (g) | Volume (mm³) | COM X (mm) | COM Y (mm) | COM Z (mm) | Status |
-|---|---:|---:|---:|---:|---:|:---:|
-| Base Housing (printed) |  |  |  |  |  | ☐ |
-| Shoulder Printed Structure |  |  |  |  |  | ☐ |
-| Link 1 Printed Structure | 283.81 | 228876.24 | 582.93 | 991.96 | 1316.60 | ✅ |
-| Elbow MG995 Servo |  |  |  |  |  | ☐ |
-| Link 2 Printed Structure |  |  |  |  |  | ☐ |
+| Component | Material | Mass (g) | Volume (mm³) | COM X (mm) | COM Y (mm) | COM Z (mm) | Evidence |
+|:----------|:--------:|---------:|-------------:|-----------:|-----------:|-----------:|:--------:|
+| **Printed Components** |||||||||
+| Base Housing | PLA | | | | | | |
+| Shoulder Structure | PLA | | | | | | |
+| Link 1 Structure | PLA | **283.81** | **228876.24** | **582.93** | **991.96** | **1316.60** | [View](Link-1-Mass-Properties.png) |
+| Link 2 Structure | PLA | **164.24** | **132452.17** | **0.00** | **72.44** | **-34.82** | [View](Link-2-Mass-Properties.png) |
+| Wrist Structure | PLA | | | | | | |
+| Gripper Structure | PLA | | | | | | |
+| **Purchased Components** |||||||||
+| Shoulder MG995 Servo | Manufacturer | | | | | | |
+| Elbow MG995 Servo | Manufacturer | | | | | | |
+| Wrist MG90S Servo | Manufacturer | | | | | | |
+| Gripper MG90S Servo | Manufacturer | | | | | | |
+| **Estimated Components** |||||||||
+| Fasteners & Heat-Set Inserts | Steel / Brass | | | | | | |
+| Wiring | Copper / PVC | | | | | | |
+| Payload (Design Target) | Variable | | | | | | |
 
 ## Supporting Figures
 
