@@ -39,7 +39,7 @@ Mass properties and centers of mass were extracted directly from SolidWorks for 
 - Center of mass
 - Material properties
 
-📄 Report
+ Report
 
 - [Atlas-V1-Mass-Inventory](./Atlas-V1-Mass-Inventory.md)
 
@@ -69,7 +69,7 @@ The analysis includes:
 
 The analysis indicates that the selected MG995 servo is theoretically capable of supporting Atlas V1 under static loading without an external payload. Dynamic loading, friction, fasteners, wiring, and payload effects were intentionally excluded from this first-order engineering estimate.
 
-📄 Report
+ Report
 
 - [Atlas-V1-Static-Shoulder-Torque-Analysis](./Atlas-V1-Static-Shoulder-Torque-Analysis.pdf)
 
@@ -84,7 +84,7 @@ Finite Element Analysis (FEA) is being performed on the primary structural compo
 - Factor of Safety
 - Critical stress concentrations
 
-📄 Report
+ Report
 
 - Atlas-V1-FEA-Analysis *(Coming Soon)*
 
@@ -104,11 +104,4 @@ The Atlas V1 engineering process followed the workflow below.
 
 ---
 
-# Current Status
 
-| Analysis | Status |
-|----------|--------|
-| Mass Inventory | ✅ Complete |
-| Static Shoulder Torque | ✅ Complete |
-| Structural FEA | ⏳ In Progress |
-| Physical Validation | ⏳ Pending |
