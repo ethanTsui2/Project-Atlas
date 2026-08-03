@@ -77,7 +77,7 @@ The custom Anycubic PLA material was temporarily assigned to the Atlas V1 base h
 
 The calculated value agrees with the expected relationship between model volume and the manufacturer-provided density.
 
-![Anycubic PLA density verification](Images/Anycubic-PLA-Density-Verification.png)
+![Anycubic PLA density verification](Anycubic-PLA-Density-Verification.png)
 
 The SolidWorks result assumes that all modeled material regions are fully dense. Actual printed mass may be lower because slicer-generated infill is not represented in the CAD mass calculation. Bambu Studio estimates and physical measurements will therefore be recorded separately for load calculations and validation.
 
