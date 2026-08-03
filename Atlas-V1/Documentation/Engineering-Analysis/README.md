@@ -1,107 +1,141 @@
 # Atlas V1 Engineering Analysis
 
-This directory contains the engineering analyses performed during the design and validation of **Atlas V1**. These studies verify the mechanical design before fabrication and provide the engineering justification for the final design decisions.
+This directory contains the engineering analyses completed for **Atlas V1**. The purpose of this documentation is to verify the mechanical design before fabrication and provide the engineering basis for major design decisions.
 
 ---
 
-# Analysis Baseline
+## Analysis Baseline
 
 All analyses were performed using a frozen copy of the final Atlas V1 CAD assembly.
 
 | Property | Value |
-|----------|-------|
+|---|---|
 | Revision | Atlas V1 Analysis Baseline |
-| Status | Mechanical design frozen for analysis |
+| Design Status | Mechanical design frozen for analysis |
 | CAD Software | SolidWorks |
-| Material | Anycubic PLA V3.0 |
-| Purpose | Validate mass properties, joint torque, and structural integrity prior to manufacturing |
+| Printed Material | Anycubic PLA V3.0 |
+| Purpose | Validate material properties, mass properties, shoulder torque, and structural integrity before manufacturing |
 
 ---
 
-# Analysis Configuration
+## Analysis Configuration
 
-The Atlas V1 shoulder joint cannot rotate to a perfectly horizontal position due to intentional mechanical interference within the joint geometry.
+The Atlas V1 shoulder joint cannot rotate to a perfectly horizontal position because of interference within the joint geometry.
 
-Therefore, all engineering calculations were performed using the **maximum collision-limited extension** obtained through SolidWorks Collision Detection. This represents the worst-case static loading condition achievable by the current design.
+The maximum practical extension was identified using **SolidWorks Collision Detection**. This collision-limited configuration was then fixed and used for the static torque analysis because it represents the highest practical loading condition achievable by the current design.
 
 ---
 
-# Engineering Reports
+## Engineering Reports
 
-## 1. Component Mass Inventory
+### 1. Material Assumptions
 
-Mass properties and centers of mass were extracted directly from SolidWorks for each major printed component.
+The printed components were modeled using material properties obtained from the **Anycubic PLA V3.0 Technical Data Sheet**. The selected values were entered into a custom SolidWorks material and used for mass-property calculations and structural analysis.
 
-**Contents**
+**Documented information**
+
+- Material source
+- Density
+- Elastic modulus
+- Poisson's ratio
+- Strength properties
+- Modeling assumptions
+- Density verification
+
+**Report**
+
+- [Atlas V1 Material Assumptions](./Material-Assumptions.md)
+
+---
+
+### 2. Component Mass Inventory
+
+Mass, volume, and center-of-mass data were extracted from SolidWorks for the primary printed components after assigning the documented PLA material.
+
+**Documented information**
 
 - Component mass
-- Volume
-- Center of mass
-- Material properties
+- Component volume
+- Center-of-mass coordinates
+- Supporting SolidWorks screenshots
 
- Report
+**Report**
 
-- [Atlas-V1-Mass-Inventory](./Atlas-V1-Mass-Inventory.md)
+- [Atlas V1 Mass Inventory](./Mass-Properties.md)
 
 ---
 
-## 2. Static Shoulder Torque Analysis
+### 3. Static Shoulder Torque Analysis
 
-The shoulder joint was evaluated using SolidWorks mass properties together with manual engineering calculations.
+The shoulder joint was evaluated using CAD-derived mass properties and manual static moment calculations.
 
 The analysis includes:
 
+- Maximum collision-limited arm configuration
 - Free-body diagram
-- CAD-derived center-of-mass locations
-- Collision-limited configuration
-- Static moment calculations
-- Servo capability comparison
+- Component weights
+- Center-of-mass locations
+- Horizontal moment arms
+- Static shoulder torque calculation
+- Comparison with the selected MG995 servo specification
 
-### Results
+#### Key Results
 
 | Quantity | Value |
 |---|---:|
-| Required shoulder torque | **1.047 N·m** |
-| Required shoulder torque | **10.67 kg·cm** |
-| Deegoo-FPV MG995 specified stall torque (6 V) | **13.00 kg·cm** |
+| Required shoulder torque | **1.047 N·m (10.67 kg·cm)** |
+| Deegoo-FPV MG995 specified stall torque at 6 V | **13.00 kg·cm** |
 | Static utilization | **82.1%** |
-| Remaining static margin | **17.9%** |
+| Remaining static torque margin | **17.9%** |
 
-The analysis indicates that the selected MG995 servo is theoretically capable of supporting Atlas V1 under static loading without an external payload. Dynamic loading, friction, fasteners, wiring, and payload effects were intentionally excluded from this first-order engineering estimate.
+The analysis indicates that the selected MG995 servo is theoretically capable of supporting Atlas V1 under static loading without an external payload.
 
- Report
+Dynamic loading, acceleration, friction, wiring, fasteners, manufacturing tolerances, and payload effects were excluded from this first-order analysis.
 
-- [Atlas-V1-Static-Shoulder-Torque-Analysis](./Atlas-V1-Static-Shoulder-Torque-Analysis.pdf)
+**Report**
+
+- [Atlas V1 Static Shoulder Torque Analysis](./Atlas-V1-Static-Shoulder-Torque-Analysis.pdf)
 
 ---
 
-## 3. Finite Element Analysis (In Progress)
+### 4. Structural Finite Element Analysis
 
-Finite Element Analysis (FEA) is being performed on the primary structural components to evaluate:
+**Status: In Progress**
 
+SolidWorks Simulation will be used to evaluate the structural performance of the primary printed components under representative static loading.
+
+The analysis will document:
+
+- Fixtures and applied loads
+- Mesh settings
 - Von Mises stress
 - Maximum displacement
-- Factor of Safety
+- Factor of safety
 - Critical stress concentrations
 
- Report
-
-- Atlas-V1-FEA-Analysis *(Coming Soon)*
+The completed FEA results will be added to this directory.
 
 ---
 
-# Engineering Workflow
+## Engineering Validation Workflow
 
-The Atlas V1 engineering process followed the workflow below.
-
-1. Freeze final CAD geometry
-2. Assign verified material properties
-3. Extract mass properties
-4. Calculate static shoulder torque
-5. Compare required torque against servo specification
-6. Perform structural FEA
-7. Validate through physical testing
+1. Freeze the final CAD geometry.
+2. Document and assign material properties.
+3. Extract component mass properties.
+4. Determine the maximum collision-limited configuration.
+5. Calculate the required static shoulder torque.
+6. Compare the required torque with the selected servo specification.
+7. Perform structural FEA on critical printed components.
+8. Validate the analytical results through physical testing.
 
 ---
 
+## Current Status
 
+| Analysis | Status |
+|---|---|
+| Material assumptions | Complete |
+| Component mass inventory | Complete |
+| Static shoulder torque analysis | Complete |
+| Structural FEA | In progress |
+| Physical validation | Pending fabrication |
