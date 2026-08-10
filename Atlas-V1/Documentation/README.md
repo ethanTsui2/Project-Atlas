@@ -30,13 +30,6 @@ The BOM will be finalized following completion of the physical build.
 
 ---
 
-## Electronics & Wiring
-
-The wiring documentation records the electrical architecture and connections used for the Atlas V1 control system, including the microcontroller, PCA9685 servo driver, external power supply, and servo connections.
-
-[View Wiring Documentation →](./wiring.md)
-
----
 
 ## Documentation Structure
 
@@ -51,7 +44,6 @@ The wiring documentation records the electrical architecture and connections use
     │   └── Engineering analysis reports
     │
     ├── BOM.md
-    ├── wiring.md
     └── README.md
 
 ---
