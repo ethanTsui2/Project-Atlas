@@ -100,42 +100,29 @@ Dynamic loading, acceleration, friction, wiring, fasteners, manufacturing tolera
 
 ### 4. Structural Finite Element Analysis
 
-**Status: In Progress**
+A conservative static structural analysis was performed on the Atlas V1 upper arm (Link 1) using SolidWorks Simulation.
 
-SolidWorks Simulation will be used to evaluate the structural performance of the primary printed components under representative static loading.
+The study evaluated:
 
-The analysis will document:
-
-- Fixtures and applied loads
-- Mesh settings
 - Von Mises stress
-- Maximum displacement
-- Factor of safety
-- Critical stress concentrations
+- Resultant displacement
+- Equivalent strain
+- Critical stress locations
+- Material-strength comparison
 
-The completed FEA results will be added to this directory.
+### Key Results
 
----
+| Quantity | Value |
+|---|---:|
+| Maximum von Mises stress | **25.31 MPa** |
+| Maximum resultant displacement | **0.755 mm** |
+| Maximum equivalent strain | **0.00450** |
+| Critical stress region | **Shoulder mounting bore** |
+| Nominal X-Y strength ratio | **1.90** |
+| Nominal Z-direction strength ratio | **1.11** |
 
-## Engineering Validation Workflow
+The model used a simplified conservative support condition in which the shoulder mounting bore was fully constrained. The physical Atlas V1 assembly includes additional bearing support at the shoulder joint, so the simulation is intended as a first-order conservative structural assessment.
 
-1. Freeze the final CAD geometry.
-2. Document and assign material properties.
-3. Extract component mass properties.
-4. Determine the maximum collision-limited configuration.
-5. Calculate the required static shoulder torque.
-6. Compare the required torque with the selected servo specification.
-7. Perform structural FEA on critical printed components.
-8. Validate the analytical results through physical testing.
+**Report**
 
----
-
-## Current Status
-
-| Analysis | Status |
-|---|---|
-| Material assumptions | Complete |
-| Component mass inventory | Complete |
-| Static shoulder torque analysis | Complete |
-| Structural FEA | In progress |
-| Physical validation | Pending fabrication |
+- [Atlas V1 Link 1 Static Structural Analysis](./Atlas-V1-Link1-Static-Structural-Analysis.pdf)
