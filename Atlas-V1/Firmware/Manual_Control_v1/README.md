@@ -17,8 +17,7 @@ Initial firmware used to validate MG90S servo operation using a single 10k poten
 - Controls one MG90S servo.
 
 ## Status
-
-✅ Validated
+ Validated
 
 ## Future Improvements
 
