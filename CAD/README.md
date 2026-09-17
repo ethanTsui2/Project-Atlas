@@ -6,18 +6,19 @@ This folder contains the final mechanical design files for Project Atlas V1.
 
 - [`Final-Package/`](./Final-Package/) - final SolidWorks parts, assembly, and STL exports
 - [`Slew-Bearing/`](./Slew-Bearing/) - printed base slew-bearing files
-- [`Final-Assembly/`](./Final-Assembly/) - CAD screenshots of the final assembly
+- [`Final-Assembly/`](./Final-Assembly/) - current CAD screenshots of the final assembly
 - [`Reference_Components/`](./Reference_Components/) - servo reference geometry used in the CAD
 - [`Final-CAD-Manifest.md`](./Final-CAD-Manifest.md) - file list for the final package
 
 ## Final Assembly Views
+
+These are the most up-to-date CAD screenshots of the finished Atlas V1 assembly.
 
 | View | Preview |
 |---|---|
 | Isometric | ![Atlas V1 Isometric](Final-Assembly/Atlas-V1-Isometric.png) |
 | Side | ![Atlas V1 Side](Final-Assembly/Atlas-V1-Side.png) |
 | Top | ![Atlas V1 Top](Final-Assembly/Atlas-V1-Top.png) |
-| Extended | ![Atlas V1 Extended](Final-Assembly/Atlas-V1-Extended.png) |
 
 ## Final Mechanical Setup
 
