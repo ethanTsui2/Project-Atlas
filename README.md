@@ -70,7 +70,7 @@ Atlas was manufactured as a real assembled system rather than a CAD-only project
 
 | Folder / document | What it contains |
 |---|---|
-| [`CAD/`](CAD/) | Final mechanical architecture, CAD views, source-file guidance, and final CAD package manifest |
+| [`CAD/`](CAD/) | Final SolidWorks package, STL exports, slew-bearing files, and assembly views |
 | [`Design-Evolution/`](Design-Evolution/) | Major design stages, problems found, and why the final architecture changed |
 | [`Documentation/Engineering-Analysis/`](Documentation/Engineering-Analysis/) | Torque analysis, FEA, material assumptions, and CAD mass properties |
 | [`Documentation/BOM.md`](Documentation/BOM.md) | Final hardware/materials plus development procurement notes |
@@ -81,7 +81,7 @@ Atlas was manufactured as a real assembled system rather than a CAD-only project
 
 ## Final CAD Package
 
-The final CAD package supplied for Atlas V1 includes the completed SolidWorks assembly, printable STL exports, controller enclosure parts, base-housing revisions, gripper components, and a separate slew-bearing package. The native assembly filenames are preserved to avoid breaking SolidWorks references.
+The authoritative final mechanical files are stored in [`CAD/Final-Package/`](CAD/Final-Package/), with the base-bearing geometry in [`CAD/Slew-Bearing/`](CAD/Slew-Bearing/). Native SolidWorks filenames are preserved to avoid breaking assembly references.
 
 [View CAD documentation →](CAD/)
 
