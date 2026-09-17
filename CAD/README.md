@@ -25,26 +25,18 @@ This folder documents the final mechanical design of **Project Atlas V1**. The c
 
 ## Final CAD Package
 
-The final Pack-and-Go package supplied for the completed build contains the assembly and referenced parts needed to preserve SolidWorks relationships. Important files include:
+The final Pack-and-Go package supplied for the completed build contains the assembly and referenced parts needed to preserve SolidWorks relationships.
 
-### Assemblies
+**[View the complete final-file manifest →](Final-CAD-Manifest.md)**
+
+### Key assemblies
 
 - `v3 assembly.SLDASM` — completed mechanical assembly
 - `Atlas-V1-Analysis-Assembly.SLDASM` — frozen assembly used for engineering analysis
 
 ### Major printed parts
 
-- `Atlas-V1-Upper-Arm.SLDPRT`
-- `Atlas-V1-Forearm edit v2.SLDPRT`
-- `Atlas-V1-Shoulder-Mount-Left.SLDPRT`
-- `Atlas-V1-Shoulder-Mount-Right.SLDPRT`
-- `Atlas-V1-Base-Housing top.SLDPRT.SLDPRT`
-- `Atlas-V1-Base-Housing bottom.SLDPRT.SLDPRT`
-- `AJM-01  → Atlas Joint Module (MG995)final.SLDPRT`
-- wrist, gripper, bearing-holder, servo-lid, and servo-horn components
-- controller top, bottom, panel, and control-board geometry
-
-Matching STL exports are included for the printable parts where available.
+The final package includes the revised upper arm, forearm, shoulder mounts, base-housing sections, MG995 joint module, bearing holders, servo interfaces, wrist/gripper components, and the controller enclosure. Matching STL exports are included where available.
 
 ## Slew Bearing
 
@@ -56,12 +48,17 @@ The slew-bearing files were kept separate from the SolidWorks Pack-and-Go packag
 
 Native SolidWorks filenames should be preserved when moving or re-uploading the final package. Renaming referenced `.SLDPRT` files outside SolidWorks can break assembly references.
 
-The repository therefore separates:
+Recommended repository layout for the final upload:
 
-- `Final-Assembly/` — quick visual references
-- `Source-Files/` — native CAD and assemblies
-- `Reference_Components/` — external servo/reference geometry
-- final STL exports — manufacturing files supplied with the final CAD package
+```text
+CAD/
+├── Final-Assembly/        # quick visual references
+├── Final-Package/         # final Pack-and-Go contents, filenames unchanged
+├── Slew-Bearing/          # separate bearing subsystem
+├── Reference_Components/  # external servo/reference geometry
+├── Final-CAD-Manifest.md
+└── README.md
+```
 
 ## Design Priorities
 
