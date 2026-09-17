@@ -1,101 +1,100 @@
 # Atlas V1 Design Evolution
 
-Atlas V1 was not developed as a single finished CAD model. The final robot is the result of repeated design → print → assemble → test → redesign cycles.
+Atlas V1 did not come from one finished CAD model. I went through several design, print, assembly, test, and redesign cycles before getting to the final version.
 
-The main goals across the redesigns were to improve **joint clearance, stiffness, mass distribution, serviceability, cable routing, printability, and base stability**.
+The main things I kept trying to improve were **joint clearance, stiffness, mass distribution, serviceability, cable routing, printability, and base stability**.
 
 ---
 
-## Stage 1 — First Prototype
+## Stage 1 - First Prototype
 
-The first version established the basic servo-driven arm architecture and mechanical gripper.
+The first version proved that the basic servo-driven arm layout and gripper could work.
 
-**Problems identified**
+**Problems I found**
 
 - bulky printed links
 - limited joint clearance
 - difficult servo access
-- excessive material use
-- inconsistent component interfaces
-- limited cable-routing space
+- too much material in some parts
+- inconsistent interfaces between components
+- not enough room for cable routing
 
 <img width="726" alt="Initial Atlas V1 prototype" src="https://github.com/user-attachments/assets/328c2b68-d8bf-4852-ad3f-d6deca671f70" />
 
-**Decision:** keep the overall concept, but redesign the structure before committing to a final build.
+**What I changed:** I kept the general concept, but decided the structure needed a full redesign before I built the final version.
 
 ---
 
-## Stage 2 — Enclosed Concept
+## Stage 2 - Enclosed Concept
 
-An enclosed-shell version was explored to hide the servos and wiring and create a smoother external form.
+I also tried an enclosed-shell version to hide the servos and wiring and make the arm look cleaner.
 
-It was not continued because it increased:
+I did not continue with it because it added:
 
-- printed mass
-- support requirements
-- assembly complexity
-- material use
-- maintenance difficulty
-- access problems around servos and fasteners
+- more printed mass
+- more supports
+- more material
+- harder assembly
+- harder maintenance
+- worse access to servos and fasteners
 
 <img width="757" alt="Atlas V1 enclosed-shell concept" src="https://github.com/user-attachments/assets/7b7d42e3-46ce-42fa-bf5f-48f2f45a9412" />
 
-**Decision:** prioritize an open, modular mechanical structure over a cosmetic shell.
+**What I changed:** I moved away from a closed shell and focused on an open, modular structure instead.
 
 ---
 
-## Stage 3 — Lightweight Modular Redesign
+## Stage 3 - Lightweight Modular Redesign
 
-The arm was redesigned around open structural rails, internal ribs, modular servo housings, split printed components, and improved access around the joints.
+The next version used open structural rails, internal ribs, modular servo housings, split printed parts, and better access around the joints.
 
-This revision improved:
+This improved:
 
 - printability
 - component access
-- structural clarity
-- cable-routing space
+- cable routing
 - assembly flexibility
 - mass distribution
-- visual consistency
+- overall appearance
 
 <img width="695" alt="Atlas V1 lightweight modular redesign" src="https://github.com/user-attachments/assets/93c1c046-da12-4f34-bb67-2d4305fef6f7" />
 
-**Decision:** use the lightweight modular architecture as the basis for the physical prototype.
+**What I changed:** this became the main structure I used for the physical prototype.
 
 ---
 
-## Stage 4 — Physical-Test Revisions
+## Stage 4 - Physical Test Revisions
 
-Assembly and testing exposed issues that were difficult to evaluate from CAD alone.
+Once I started assembling and testing the arm, I found problems that were much harder to notice in CAD.
 
-Major problems addressed included:
+The main ones were:
 
-- base tilting under the arm load
-- forearm interference / restricted movement
-- cable pinching and routing constraints
+- the base tilting under the arm load
+- forearm interference and restricted movement
+- cable pinching
 - servo-horn interference
-- wrist and gripper packaging constraints
-- joint-access and serviceability limitations
+- limited wrist and gripper clearance
+- awkward access to some joints and fasteners
 
-The most significant base revision was the addition of a **printed slew-bearing system using six steel balls**, providing mechanical support separate from the servo output shaft.
+The biggest change was the base. I added a **printed slew bearing using six steel balls** so the rotating structure had its own mechanical support instead of relying mainly on the servo output shaft.
 
-The forearm, joint interfaces, servo mounting, and surrounding geometry were also revised based on fit and range-of-motion testing.
+I also revised the forearm, servo interfaces, wiring space, and surrounding geometry after checking the real range of motion.
 
 ---
 
-## Stage 5 — Completed Atlas V1
+## Stage 5 - Completed Atlas V1
 
-The final physical build combines:
+The final build uses:
 
-- 3× MG995 servos for the larger arm joints
-- 2× MG90S servos for the lighter end-effector functions
+- 3x MG995 servos for the larger arm joints
+- 2x MG90S servos for the lighter end-effector functions
 - printed structural links and modular housings
-- bearing-supported base rotation
+- a bearing-supported rotating base
 - revised forearm and joint clearances
-- internal/managed cable routing
-- separate five-potentiometer controller enclosure
-- 16×2 LCD feedback
-- finished metallic-red painted exterior
+- managed cable routing
+- a separate five-potentiometer controller enclosure
+- a 16x2 LCD
+- a metallic red painted finish
 
 <p align="center">
   <img src="../docs/assets/atlas-photo.jpeg" alt="Completed Project Atlas V1" width="720">
@@ -103,19 +102,19 @@ The final physical build combines:
 
 ---
 
-## Main Engineering Lessons
+## Main Things I Learned
 
-- Full-assembly collision checks matter more than evaluating parts in isolation.
-- Distal mass has a large effect on shoulder torque, so weight reduction should focus on the outer links and end effector.
-- Servo access, screw access, and wire routing need to be designed before printing.
-- A servo output shaft should not be expected to provide all structural support for a loaded rotating base.
-- Physical prototypes reveal tolerance, interference, stiffness, and routing problems that are easy to miss in CAD.
-- A consistent design language can improve appearance without adding unnecessary mass or decorative geometry.
+- Checking the full assembly matters more than checking parts one at a time.
+- Weight farther from the shoulder has a much bigger effect on torque.
+- Servo access, screw access, and cable routing need to be planned before printing.
+- The servo shaft should not be the only structural support for a loaded rotating base.
+- Physical prototypes expose tolerance, interference, stiffness, and routing problems that are easy to miss in CAD.
+- A design can still look clean without adding a lot of extra material.
 
 ## Final Status
 
 **Atlas V1 is complete as a functional physical prototype.**
 
-The repository preserves the major design stages so the final geometry can be understood as the result of engineering iteration rather than a single polished model.
+I kept these earlier stages in the repo because they show how the project actually developed and why the final design looks the way it does.
 
-For the final build and manufacturing notes, see [Build Notes](../Documentation/Build-Notes.md).
+For the final manufacturing and assembly details, see [Build Notes](../Documentation/Build-Notes.md).
