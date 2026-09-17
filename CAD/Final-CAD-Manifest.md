@@ -1,11 +1,11 @@
 # Atlas V1 Final CAD Package Manifest
 
-This manifest records the final CAD files for the completed Atlas V1 build. Filenames are preserved exactly to avoid breaking SolidWorks references.
+This is the file list for the final Atlas V1 CAD package. I kept the original filenames so the SolidWorks references are not broken.
 
 ## Repository Locations
 
-- [`Final-Package/`](./Final-Package/) — main Atlas SolidWorks package and printable STL exports
-- [`Slew-Bearing/`](./Slew-Bearing/) — final base slew-bearing files
+- [`Final-Package/`](./Final-Package/) - main Atlas SolidWorks package and STL exports
+- [`Slew-Bearing/`](./Slew-Bearing/) - final base slew-bearing files
 
 ## Main Atlas Package
 
@@ -77,8 +77,8 @@ This manifest records the final CAD files for the completed Atlas V1 build. File
 - `Cage.stl`
 - `Parametric+Slew+Bearing+v9.stl`
 
-The completed base bearing uses **six steel balls**.
+The finished base bearing uses **six steel balls**.
 
-## File-Handling Note
+## File Handling Note
 
-The final package is intentionally kept together with its original filenames. Renaming native SolidWorks files outside SolidWorks can break assembly references.
+The final package is kept together with the original filenames. Renaming SolidWorks parts outside SolidWorks can break assembly references.
