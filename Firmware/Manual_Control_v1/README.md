@@ -1,70 +1,19 @@
-# Manual Control v1
+# Manual Control v1 — Development Archive
 
-## Purpose
+Manual Control v1 was the first integrated potentiometer-based controller used during Project Atlas mechanical and electronics testing.
 
-Manual Control v1 is the first integrated manual-control firmware developed for the Project Atlas robotic arm.
+It demonstrated the core control path:
 
-The firmware allows the arm's servo-driven joints to be controlled directly using potentiometer inputs. It was developed to provide a simple and reliable method of operating the assembled arm during mechanical, electrical, and system-level testing.
+**Potentiometers → Arduino Nano → I2C → PCA9685 → Servos**
 
-## Hardware
-
-- Arduino Nano
-- PCA9685 16-channel PWM servo controller
-- Potentiometers for manual joint control
-- MG995 servo motors
-- MG90S servo motors
-- External regulated servo power supply
-
-## Operation
-
-The Arduino Nano reads the analog position of each potentiometer and converts the input into a commanded joint position.
-
-Servo commands are then sent to the PCA9685 over I2C, allowing multiple joints to be controlled simultaneously.
-
-The potentiometers provide direct manual control of the robotic arm and make it possible to evaluate joint movement without requiring a higher-level control system.
-
-## Features
-
-- Manual potentiometer-based joint control
-- Simultaneous control of multiple servos
-- PCA9685 PWM servo control
-- Arduino Nano control platform
-- Independent external servo power
-- Direct joint positioning for testing
-- Simple platform for mechanical and electrical validation
-
-## Role in Project Atlas
-
-Manual Control v1 was developed primarily as a testing and validation tool.
-
-It allows the assembled robotic arm to be operated while evaluating:
-
-- Joint range of motion
-- Servo direction
-- Mechanical interference
-- Structural behavior
-- Wiring and electronics integration
-- Servo response
-- Overall system operation
-
-The goal of this firmware is not autonomous control. It provides a straightforward manual interface for validating the physical robotic system before more advanced control methods are introduced.
+The sketch was useful for validating joint motion, servo direction, wiring, range of motion, and overall system integration before the final controller was completed.
 
 ## Status
 
-**Functional prototype**
+**Archived development firmware.**
 
-Manual joint control has been implemented and is being used as the primary control method for the current Project Atlas prototype.
+The completed V1 controller is now documented in:
 
-## Future Improvements
+[`../Final_Control/Atlas_Final_Control.ino`](../Final_Control/Atlas_Final_Control.ino)
 
-Potential improvements include:
-
-- Joint-specific angle limits
-- Servo calibration offsets
-- Motion smoothing
-- Controlled acceleration and deceleration
-- Defined startup positions
-- Improved safety behavior
-- Motion recording and playback
-- Higher-level coordinated joint control
-- Closed-loop position feedback
+The final sketch adds input averaging, a deadband, and 16×2 LCD joint/angle feedback while retaining the same basic manual-control architecture.
