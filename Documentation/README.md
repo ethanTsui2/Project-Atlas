@@ -1,51 +1,25 @@
-# Atlas V1 Documentation
+# Project Atlas Documentation
 
-This directory contains the supporting engineering documentation for **Atlas V1**, including mechanical analysis, electronics documentation, and the project bill of materials.
+This folder contains the supporting engineering documentation for the completed **Atlas V1** prototype.
 
----
+The documentation is intentionally split into short, focused sections so a reader can either skim the project quickly or follow the engineering work in more detail.
 
-## Engineering Analysis
+## Documentation Map
 
-The [`Engineering-Analysis`](./Engineering-Analysis/) directory contains the mechanical engineering analysis performed to evaluate the Atlas V1 design prior to final fabrication.
+| Document | Purpose |
+|---|---|
+| [Engineering Analysis](./Engineering-Analysis/README.md) | Material assumptions, CAD mass properties, static shoulder torque, and upper-arm FEA |
+| [Bill of Materials](./BOM.md) | Final hardware/materials plus development procurement notes |
+| [Build Notes](./Build-Notes.md) | Manufacturing, assembly, slew-bearing redesign, controller, wiring, and surface finishing |
 
-The analysis includes:
+## Related Project Sections
 
-- CAD-derived component mass properties and centers of mass
-- PLA material assumptions and manufacturer data
-- Static shoulder torque analysis
-- MG995 servo capability comparison
-- Static structural finite element analysis (FEA) of the upper arm
+- [CAD](../CAD/) — final mechanical architecture and CAD package guidance
+- [Design Evolution](../Design-Evolution/) — major revisions and problems solved
+- [Electronics](../Electronics/) — final control architecture and wiring
+- [Firmware](../Firmware/) — final manual-control firmware and development sketches
+- [Portfolio Site](https://ethantsui2.github.io/Project-Atlas/) — recruiter-facing overview, resume, photo, and demo video
 
-[View Engineering Analysis →](./Engineering-Analysis/README.md)
+## Documentation Philosophy
 
----
-
-## Bill of Materials
-
-The Bill of Materials documents the major mechanical, electrical, and purchased components used to construct Atlas V1.
-
-The BOM will be finalized following completion of the physical build.
-
-[View Bill of Materials →](./BOM.md)
-
----
-
-
-## Documentation Structure
-
-    Documentation/
-    │
-    ├── Engineering-Analysis/
-    │   ├── Images/
-    │   ├── References/
-    │   ├── README.md
-    │   ├── Mass-Properties.md
-    │   ├── Material-Assumptions.md
-    │   └── Engineering analysis reports
-    │
-    ├── BOM.md
-    └── README.md
-
----
-
-The documentation in this directory supports the design, analysis, fabrication, and validation of Atlas V1.
+Only information that supports the actual design, build, analysis, or operation of Atlas V1 is kept here. Generic tool requirements and routine workshop equipment are intentionally omitted unless they affect the design itself.
