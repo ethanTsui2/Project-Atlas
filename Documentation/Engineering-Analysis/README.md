@@ -1,29 +1,31 @@
 # Atlas V1 Engineering Analysis
 
-This directory contains the engineering analyses completed for **Atlas V1** before final fabrication. The analyses are retained as the design baseline that informed the physical build; they should not be interpreted as certified performance ratings for the completed painted assembly.
+I completed these analyses before the final Atlas V1 build to check the main mechanical loads and make better design decisions before printing everything.
+
+They are design checks, not certified performance ratings for the finished robot.
 
 ## Analysis Baseline
 
-All analyses were performed using a frozen copy of the Atlas V1 CAD assembly.
+All of the analysis was done using a frozen copy of the Atlas V1 CAD assembly.
 
 | Property | Value |
 |---|---|
 | Revision | Atlas V1 Analysis Baseline |
 | CAD Software | SolidWorks |
 | Printed Material | Anycubic PLA V3.0 |
-| Purpose | Evaluate material properties, mass properties, shoulder torque, and upper-arm structural behavior before manufacturing |
+| Purpose | Check material properties, mass properties, shoulder torque, and upper-arm structural behavior before manufacturing |
 
 ## Analysis Configuration
 
-The analysis assembly used the maximum practical extension identified with SolidWorks Collision Detection. That configuration was selected for the static shoulder-torque calculation because it represented the highest practical moment arm available in the analyzed geometry.
+For the shoulder torque calculation, I used the maximum practical extension I could reach before collision in SolidWorks. I chose that position because it gave the largest practical moment arm in the analyzed geometry.
 
 ---
 
 ## 1. Material Assumptions
 
-The printed components were modeled using material properties from the **Anycubic PLA V3.0 Technical Data Sheet**. The selected values were entered into a custom SolidWorks material and used for mass-property calculations and structural analysis.
+I created a custom SolidWorks material using values from the **Anycubic PLA V3.0 Technical Data Sheet**.
 
-Documented information includes:
+The material documentation includes:
 
 - density
 - elastic modulus
@@ -32,21 +34,21 @@ Documented information includes:
 - modeling assumptions
 - density verification
 
-[View material assumptions →](./Material-Assumptions.md)
+[View material assumptions](./Material-Assumptions.md)
 
 ---
 
 ## 2. CAD Mass Properties
 
-Mass, volume, and center-of-mass data were extracted from SolidWorks for the primary modeled components.
+I extracted mass, volume, and center-of-mass data from SolidWorks for the main modeled components.
 
-[View mass-property inventory →](./Mass-Properties.md)
+[View mass-property inventory](./Mass-Properties.md)
 
 ---
 
 ## 3. Static Shoulder Torque Analysis
 
-The shoulder joint was evaluated using CAD-derived mass properties and a first-order static moment calculation.
+I used the CAD mass properties and a static moment calculation to estimate the shoulder torque requirement.
 
 ### Key Results
 
@@ -57,17 +59,17 @@ The shoulder joint was evaluated using CAD-derived mass properties and a first-o
 | Static utilization | **82.1%** |
 | Remaining static torque margin | **17.9%** |
 
-The analysis indicated that the selected MG995 was theoretically capable of supporting the analyzed V1 configuration under static loading without an external payload.
+Based on this calculation, the MG995 was theoretically capable of holding the analyzed configuration under static loading with no external payload.
 
-Dynamic loading, acceleration, friction, wiring, fasteners, manufacturing tolerances, and payload effects were excluded from this first-order model.
+This calculation did not include dynamic loading, acceleration, friction, wiring, fasteners, manufacturing tolerances, or payload effects.
 
-[View full torque report →](./Atlas-V1-Static-Shoulder-Torque-Analysis.pdf)
+[View full torque report](./Atlas-V1-Static-Shoulder-Torque-Analysis.pdf)
 
 ---
 
 ## 4. Upper-Arm Static Structural FEA
 
-A conservative static structural study was performed on the Atlas V1 upper arm using SolidWorks Simulation.
+I also ran a static structural study on the upper arm in SolidWorks Simulation.
 
 ### Key Results
 
@@ -80,16 +82,16 @@ A conservative static structural study was performed on the Atlas V1 upper arm u
 | Nominal X-Y strength ratio | **1.90** |
 | Nominal Z-direction strength ratio | **1.11** |
 
-The model used a simplified conservative support condition in which the shoulder mounting bore was fully constrained. The physical V1 joint includes additional bearing/support structure, so this study is best treated as a first-order structural assessment rather than a direct prediction of final assembled behavior.
+For the model, I fully constrained the shoulder mounting bore. The real joint has additional bearing and support structure, so I treated the FEA as a conservative design check instead of an exact prediction of the assembled arm.
 
-[View full FEA report →](./Atlas-V1-Link1-Static-Structural-Analysis.pdf)
+[View full FEA report](./Atlas-V1-Link1-Static-Structural-Analysis.pdf)
 
 ---
 
-## Post-Build Context
+## After the Analysis
 
-Atlas V1 was subsequently manufactured and assembled as a functional prototype. Physical testing drove additional mechanical revisions, particularly around base support, clearance, wiring, and packaging.
+After building Atlas, physical testing led to more changes around the base support, joint clearance, wiring, and packaging.
 
-The original analysis is preserved because it documents the engineering reasoning used before fabrication. Any future payload, backlash, accuracy, or repeatability claims should be based on separate physical tests rather than inferred from these reports.
+I kept the original analysis in the repo because it shows the reasoning I used before fabrication. Any future payload, backlash, accuracy, or repeatability numbers should come from physical testing rather than being estimated from these reports.
 
-[Return to project overview →](../../README.md)
+[Return to project overview](../../README.md)
