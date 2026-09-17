@@ -1,25 +1,23 @@
 # Project Atlas Documentation
 
-This folder contains the supporting engineering documentation for the completed **Atlas V1** prototype.
+This folder contains the supporting engineering documentation for the completed Atlas V1 prototype.
 
-The documentation is intentionally split into short, focused sections so a reader can either skim the project quickly or follow the engineering work in more detail.
+I split the documentation into a few focused sections so it is easy to skim, but the technical details are still there if someone wants to go deeper.
 
 ## Documentation Map
 
-| Document | Purpose |
+| Document | What it covers |
 |---|---|
-| [Engineering Analysis](./Engineering-Analysis/README.md) | Material assumptions, CAD mass properties, static shoulder torque, and upper-arm FEA |
-| [Bill of Materials](./BOM.md) | Final hardware/materials plus development procurement notes |
+| [Engineering Analysis](./Engineering-Analysis/README.md) | Material assumptions, CAD mass properties, shoulder torque, and upper-arm FEA |
+| [Bill of Materials](./BOM.md) | Hardware, materials, and documented project purchases |
 | [Build Notes](./Build-Notes.md) | Manufacturing, assembly, slew-bearing redesign, controller, wiring, and surface finishing |
 
 ## Related Project Sections
 
-- [CAD](../CAD/) — final mechanical architecture and CAD package guidance
-- [Design Evolution](../Design-Evolution/) — major revisions and problems solved
-- [Electronics](../Electronics/) — final control architecture and wiring
-- [Firmware](../Firmware/) — final manual-control firmware and development sketches
-- [Portfolio Site](https://ethantsui2.github.io/Project-Atlas/) — recruiter-facing overview, resume, photo, and demo video
+- [CAD](../CAD/) - final mechanical files and assembly views
+- [Design Evolution](../Design-Evolution/) - the major versions and problems that led to redesigns
+- [Electronics](../Electronics/) - control architecture and wiring
+- [Firmware](../Firmware/) - final control code and earlier test sketches
+- [Portfolio Site](https://ethantsui2.github.io/Project-Atlas/) - quick overview, resume, photo, and demo video
 
-## Documentation Philosophy
-
-Only information that supports the actual design, build, analysis, or operation of Atlas V1 is kept here. Generic tool requirements and routine workshop equipment are intentionally omitted unless they affect the design itself.
+I left out generic workshop tools and other routine items unless they directly affected the design or build.
