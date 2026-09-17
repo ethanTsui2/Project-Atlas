@@ -1,85 +1,54 @@
 # Atlas V1 Engineering Analysis
 
-This directory contains the engineering analyses completed for **Atlas V1**. The purpose of this documentation is to verify the mechanical design before fabrication and provide the engineering basis for major design decisions.
-
----
+This directory contains the engineering analyses completed for **Atlas V1** before final fabrication. The analyses are retained as the design baseline that informed the physical build; they should not be interpreted as certified performance ratings for the completed painted assembly.
 
 ## Analysis Baseline
 
-All analyses were performed using a frozen copy of the final Atlas V1 CAD assembly.
+All analyses were performed using a frozen copy of the Atlas V1 CAD assembly.
 
 | Property | Value |
 |---|---|
 | Revision | Atlas V1 Analysis Baseline |
-| Design Status | Mechanical design frozen for analysis |
 | CAD Software | SolidWorks |
 | Printed Material | Anycubic PLA V3.0 |
-| Purpose | Validate material properties, mass properties, shoulder torque, and structural integrity before manufacturing |
-
----
+| Purpose | Evaluate material properties, mass properties, shoulder torque, and upper-arm structural behavior before manufacturing |
 
 ## Analysis Configuration
 
-The Atlas V1 shoulder joint cannot rotate to a perfectly horizontal position because of interference within the joint geometry.
-
-The maximum practical extension was identified using **SolidWorks Collision Detection**. This collision-limited configuration was then fixed and used for the static torque analysis because it represents the highest practical loading condition achievable by the current design.
+The analysis assembly used the maximum practical extension identified with SolidWorks Collision Detection. That configuration was selected for the static shoulder-torque calculation because it represented the highest practical moment arm available in the analyzed geometry.
 
 ---
 
-## Engineering Reports
+## 1. Material Assumptions
 
-### 1. Material Assumptions
+The printed components were modeled using material properties from the **Anycubic PLA V3.0 Technical Data Sheet**. The selected values were entered into a custom SolidWorks material and used for mass-property calculations and structural analysis.
 
-The printed components were modeled using material properties obtained from the **Anycubic PLA V3.0 Technical Data Sheet**. The selected values were entered into a custom SolidWorks material and used for mass-property calculations and structural analysis.
+Documented information includes:
 
-**Documented information**
-
-- Material source
-- Density
-- Elastic modulus
+- density
+- elastic modulus
 - Poisson's ratio
-- Strength properties
-- Modeling assumptions
-- Density verification
+- strength properties
+- modeling assumptions
+- density verification
 
-**Report**
-
-- [Atlas V1 Material Assumptions](./Material-Assumptions.md)
+[View material assumptions →](./Material-Assumptions.md)
 
 ---
 
-### 2. Component Mass Inventory
+## 2. CAD Mass Properties
 
-Mass, volume, and center-of-mass data were extracted from SolidWorks for the primary printed components after assigning the documented PLA material.
+Mass, volume, and center-of-mass data were extracted from SolidWorks for the primary modeled components.
 
-**Documented information**
-
-- Component mass
-- Component volume
-- Center-of-mass coordinates
-- Supporting SolidWorks screenshots
-
-**Report**
-
-- [Atlas V1 Mass Inventory](./Mass-Properties.md)
+[View mass-property inventory →](./Mass-Properties.md)
 
 ---
 
-### 3. Static Shoulder Torque Analysis
+## 3. Static Shoulder Torque Analysis
 
-The shoulder joint was evaluated using CAD-derived mass properties and manual static moment calculations.
+The shoulder joint was evaluated using CAD-derived mass properties and a first-order static moment calculation.
 
-The analysis includes:
-
-- Maximum collision-limited arm configuration
-- Free-body diagram
-- Component weights
-- Center-of-mass locations
-- Horizontal moment arms
-- Static shoulder torque calculation
-- Comparison with the selected MG995 servo specification
-
-#### Key Results
+### Key Results
 
 | Quantity | Value |
 |---|---:|
@@ -88,27 +57,17 @@ The analysis includes:
 | Static utilization | **82.1%** |
 | Remaining static torque margin | **17.9%** |
 
-The analysis indicates that the selected MG995 servo is theoretically capable of supporting Atlas V1 under static loading without an external payload.
+The analysis indicated that the selected MG995 was theoretically capable of supporting the analyzed V1 configuration under static loading without an external payload.
 
-Dynamic loading, acceleration, friction, wiring, fasteners, manufacturing tolerances, and payload effects were excluded from this first-order analysis.
+Dynamic loading, acceleration, friction, wiring, fasteners, manufacturing tolerances, and payload effects were excluded from this first-order model.
 
-**Report**
-
-- [Atlas V1 Static Shoulder Torque Analysis](./Atlas-V1-Static-Shoulder-Torque-Analysis.pdf)
+[View full torque report →](./Atlas-V1-Static-Shoulder-Torque-Analysis.pdf)
 
 ---
 
-### 4. Structural Finite Element Analysis
+## 4. Upper-Arm Static Structural FEA
 
-A conservative static structural analysis was performed on the Atlas V1 upper arm (Link 1) using SolidWorks Simulation.
-
-The study evaluated:
-
-- Von Mises stress
-- Resultant displacement
-- Equivalent strain
-- Critical stress locations
-- Material-strength comparison
+A conservative static structural study was performed on the Atlas V1 upper arm using SolidWorks Simulation.
 
 ### Key Results
 
@@ -121,8 +80,16 @@ The study evaluated:
 | Nominal X-Y strength ratio | **1.90** |
 | Nominal Z-direction strength ratio | **1.11** |
 
-The model used a simplified conservative support condition in which the shoulder mounting bore was fully constrained. The physical Atlas V1 assembly includes additional bearing support at the shoulder joint, so the simulation is intended as a first-order conservative structural assessment.
+The model used a simplified conservative support condition in which the shoulder mounting bore was fully constrained. The physical V1 joint includes additional bearing/support structure, so this study is best treated as a first-order structural assessment rather than a direct prediction of final assembled behavior.
 
-**Report**
+[View full FEA report →](./Atlas-V1-Link1-Static-Structural-Analysis.pdf)
 
-- [Atlas V1 Link 1 Static Structural Analysis](./Atlas-V1-Link1-Static-Structural-Analysis.pdf)
+---
+
+## Post-Build Context
+
+Atlas V1 was subsequently manufactured and assembled as a functional prototype. Physical testing drove additional mechanical revisions, particularly around base support, clearance, wiring, and packaging.
+
+The original analysis is preserved because it documents the engineering reasoning used before fabrication. Any future payload, backlash, accuracy, or repeatability claims should be based on separate physical tests rather than inferred from these reports.
+
+[Return to project overview →](../../README.md)
