@@ -1,13 +1,17 @@
 # Atlas V1 Final CAD Package Manifest
 
-This manifest records the contents of the final CAD packages supplied for the completed Atlas V1 build. Filenames are preserved exactly so SolidWorks references are not silently renamed outside the CAD environment.
+This manifest records the final CAD files for the completed Atlas V1 build. Filenames are preserved exactly to avoid breaking SolidWorks references.
+
+## Repository Locations
+
+- [`Final-Package/`](./Final-Package/) — main Atlas SolidWorks package and printable STL exports
+- [`Slew-Bearing/`](./Slew-Bearing/) — final base slew-bearing files
 
 ## Main Atlas Package
 
-### Assemblies
+### Assembly
 
 - `v3 assembly.SLDASM`
-- `Atlas-V1-Analysis-Assembly.SLDASM`
 
 ### Major arm / base parts
 
@@ -75,16 +79,6 @@ This manifest records the contents of the final CAD packages supplied for the co
 
 The completed base bearing uses **six steel balls**.
 
-## Repository Handling Recommendation
+## File-Handling Note
 
-For the cleanest GitHub structure, the final files should be uploaded without renaming into:
-
-```text
-CAD/
-├── Final-Package/
-│   └── [main Atlas Pack-and-Go contents]
-└── Slew-Bearing/
-    └── [slew-bearing package contents]
-```
-
-Keeping the main Pack-and-Go files together is preferred over individually renaming them because SolidWorks assemblies depend on referenced filenames.
+The final package is intentionally kept together with its original filenames. Renaming native SolidWorks files outside SolidWorks can break assembly references.
