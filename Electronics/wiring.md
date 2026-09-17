@@ -1,8 +1,8 @@
 # Atlas V1 Wiring
 
-This page reflects the final manual-control firmware and electronics architecture.
+This page matches the final manual-control firmware and electronics setup.
 
-## Arduino Nano ↔ PCA9685
+## Arduino Nano - PCA9685
 
 | Arduino Nano | PCA9685 | Function |
 |---|---|---|
@@ -13,7 +13,7 @@ This page reflects the final manual-control firmware and electronics architectur
 
 ## I2C LCD
 
-The 16×2 I2C LCD shares the same I2C bus:
+The 16x2 I2C LCD shares the same I2C bus:
 
 | LCD | Arduino Nano | Function |
 |---|---|---|
@@ -31,11 +31,9 @@ The five servos are powered from a regulated **5 V, 10 A** external supply throu
 | +5 V | V+ screw terminal |
 | GND | GND screw terminal |
 
-The Arduino Nano is powered through USB. The Nano, PCA9685, LCD, and external supply must share a common ground.
+The Arduino Nano is powered through USB. The Nano, PCA9685, LCD, and external supply all share a common ground.
 
 ## Potentiometer Inputs
-
-The final firmware uses the following analog pins and display labels:
 
 | Analog pin | Firmware label |
 |---|---|
@@ -47,9 +45,9 @@ The final firmware uses the following analog pins and display labels:
 
 Each potentiometer is wired with:
 
-- one outer terminal → 5 V
-- one outer terminal → GND
-- center wiper → assigned analog input
+- one outer terminal - 5 V
+- one outer terminal - GND
+- center wiper - assigned analog input
 
 ## PCA9685 Servo Channels
 
@@ -61,17 +59,15 @@ Each potentiometer is wired with:
 | PWM3 | PIVOT |
 | PWM4 | JAWS |
 
-The firmware naming is preserved here exactly as implemented in the final sketch.
-
 ## Servo Connector Orientation
 
 Each servo connects to the PCA9685 with:
 
-- signal → PWM
-- positive → V+
-- ground → GND
+- signal - PWM
+- positive - V+
+- ground - GND
 
-Servo extension leads and 22 AWG flexible wire were used where needed to route signals and power through the assembled arm and controller.
+I used servo extension leads and 22 AWG flexible wire where needed to route the wiring through the arm and controller.
 
 ## Power / Wiring Checks
 
