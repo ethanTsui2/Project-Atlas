@@ -1,10 +1,8 @@
 # Atlas V1 Bill of Materials
 
-This BOM separates **hardware/materials used in the completed prototype** from items purchased during development that were not necessarily consumed in the final build.
+This BOM separates the parts and materials used in the finished prototype from things I bought during development but did not necessarily use in the final arm.
 
-It is therefore more representative than treating every project purchase as installed hardware.
-
-## Final Build — Core Hardware
+## Final Build - Core Hardware
 
 | Item | Qty used | Role |
 |---|---:|---|
@@ -13,9 +11,9 @@ It is therefore more representative than treating every project purchase as inst
 | Arduino Nano | 1 | Main controller |
 | PCA9685 16-channel PWM driver | 1 | Servo PWM generation over I2C |
 | WH148-style potentiometer | 5 | Manual joint input |
-| 16×2 I2C LCD | 1 | Joint / angle feedback |
+| 16x2 I2C LCD | 1 | Joint / angle feedback |
 | Regulated 5 V, 10 A power supply | 1 | External servo power |
-| Flanged ball bearings (F688-2RS, 8×16×5 mm) | As required | Joint / rotating support |
+| Flanged ball bearings (F688-2RS, 8x16x5 mm) | As required | Joint / rotating support |
 | Precision steel balls | 6 | Printed slew-bearing base |
 | Servo extension leads | As required | Servo wiring and routing |
 | 22 AWG flexible wire | As required | Power / controller wiring |
@@ -23,55 +21,55 @@ It is therefore more representative than treating every project purchase as inst
 
 ## Printed / Fabricated Components
 
-Structural and enclosure parts were produced using FDM 3D printing from the final CAD package, including:
+The main structural and enclosure parts were FDM printed from the final CAD package, including:
 
 - base housing
-- shoulder / joint structure
+- shoulder and joint structure
 - upper arm
 - revised forearm
-- wrist and gripper components
+- wrist and gripper parts
 - bearing holders and servo covers
-- printed slew-bearing components
+- printed slew-bearing parts
 - controller enclosure and panel
 
-PLA purchased during development included black and white Anycubic filament. Final visible arm components were surface-finished after printing.
+I bought both black and white Anycubic PLA during development. The final visible arm parts were painted after printing.
 
-## Surface Finish Used
+## Surface Finish
 
 | Material | Purpose |
 |---|---|
-| Rust-Oleum 2-in-1 Filler & Sandable Primer | Fill print texture / prepare surface |
+| Rust-Oleum 2-in-1 Filler & Sandable Primer | Fill print texture and prepare the surface |
 | Rust-Oleum metallic silver | Metallic base layer |
-| Dupli-Color Metalcast Anodized Coating — Red | Final translucent metallic-red color |
+| Dupli-Color Metalcast Anodized Coating - Red | Final translucent metallic-red color |
 | Rust-Oleum Painter's Touch 2X Gloss Clear | Protective gloss clear coat |
 
 ## Development / Workshop Purchases
 
-The following were purchased for Project Atlas development, prototyping, assembly, or future reuse, but should **not** automatically be interpreted as installed in the final robot:
+These were bought for Atlas development, prototyping, assembly, or future projects, but they were not all installed in the final robot:
 
 - M3 heat-set insert / screw assortment
 - perfboard assortment
 - solder wick and flux
 - extra MG995 and MG90S servos from multipacks
 - extra potentiometers
-- excess bearings / steel balls from assortments
+- extra bearings and steel balls from assortments
 - extra wiring and servo extension leads
-- unused filament from purchased spools
+- unused filament from the purchased spools
 
-General reusable tools such as screwdrivers, soldering tools, cutters, and measurement tools are intentionally excluded from the BOM.
+I did not include general reusable tools such as screwdrivers, soldering tools, cutters, or measuring tools.
 
 ## Procurement Cost Note
 
-The supplied purchase screenshots contain a mixture of TTD and USD order totals. Several screenshots are cropped before the order total, and some orders contain multiple products, so an exact per-part final-build cost cannot be reconstructed reliably from those screenshots alone.
+The purchase screenshots include both TTD and USD totals. Some screenshots are cropped before the order total and some orders contain multiple items, so this is not an exact final-build cost.
 
-From the screenshots where an order total is visible:
+From the screenshots where the order total is visible:
 
-- **TTD-denominated visible orders:** TTD **1,290.93**
-- Using a representative mid-August 2026 historical rate of about **0.145 USD per TTD**, this is approximately **US$187.18**.
-- **USD-denominated visible orders:** **US$26.84**
-- **Partial documented procurement total:** approximately **US$214.02**
+- **TTD visible orders:** TTD **1,290.93**
+- Using a representative mid-August 2026 rate of about **0.145 USD per TTD**, that is about **US$187.18**
+- **USD visible orders:** **US$26.84**
+- **Partial documented procurement total:** about **US$214.02**
 
-This is a **procurement subtotal, not the final robot cost**. It includes some materials intended for future projects and excludes screenshots where the order total was not visible, along with generic reusable tools.
+This number is a procurement subtotal, not the cost of only the parts installed on Atlas. Some of the material was left over for future projects, and some purchases are missing because the screenshot did not show a usable total.
 
 <details>
 <summary><b>Visible order totals used for the subtotal</b></summary>
@@ -91,12 +89,12 @@ This is a **procurement subtotal, not the final robot cost**. It includes some m
 | Jun 30, 2026 | Perfboard assortment | US$10.74 |
 | Jun 30, 2026 | Heat-set insert / screw assortment | US$16.10 |
 
-Screenshots for the MG90S/potentiometer purchase, servo-extension leads, and soldering consumables did not show a usable order total and are not included in the subtotal.
+The MG90S/potentiometer purchase, servo-extension leads, and soldering consumables did not show a usable order total in the screenshots, so I left them out of the subtotal.
 
 </details>
 
 ## Notes
 
-- The final arm uses a **5 V, 10 A** external supply; this supersedes the lower-current supply considered earlier in development.
-- The final base includes the printed slew-bearing redesign with six steel balls.
-- Quantities marked "As required" are intentionally not invented where the final installed count was not documented.
+- The final arm uses a **5 V, 10 A** external supply instead of the lower-current supply I considered earlier.
+- The final base uses the printed slew-bearing redesign with six steel balls.
+- I used "As required" where I did not have a final installed count instead of guessing.
