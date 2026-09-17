@@ -1,14 +1,14 @@
 # Atlas V1 CAD
 
-This folder contains the final mechanical design package for **Project Atlas V1**.
+This folder contains the final mechanical design files for Project Atlas V1.
 
 ## Quick Access
 
-- [`Final-Package/`](./Final-Package/) — authoritative final SolidWorks parts/assembly and printable STL exports
-- [`Slew-Bearing/`](./Slew-Bearing/) — final printed slew-bearing geometry used at the base
-- [`Final-Assembly/`](./Final-Assembly/) — quick-reference CAD screenshots
-- [`Reference_Components/`](./Reference_Components/) — external/reference servo geometry
-- [`Final-CAD-Manifest.md`](./Final-CAD-Manifest.md) — concise inventory of the final package
+- [`Final-Package/`](./Final-Package/) - final SolidWorks parts, assembly, and STL exports
+- [`Slew-Bearing/`](./Slew-Bearing/) - printed base slew-bearing files
+- [`Final-Assembly/`](./Final-Assembly/) - CAD screenshots of the final assembly
+- [`Reference_Components/`](./Reference_Components/) - servo reference geometry used in the CAD
+- [`Final-CAD-Manifest.md`](./Final-CAD-Manifest.md) - file list for the final package
 
 ## Final Assembly Views
 
@@ -19,37 +19,36 @@ This folder contains the final mechanical design package for **Project Atlas V1*
 | Top | ![Atlas V1 Top](Final-Assembly/Atlas-V1-Top.png) |
 | Extended | ![Atlas V1 Extended](Final-Assembly/Atlas-V1-Extended.png) |
 
-## Final Mechanical Architecture
+## Final Mechanical Setup
 
 | Subsystem | Final approach |
 |---|---|
 | Base | Printed housing with six-ball slew-bearing support |
 | Shoulder / main joints | MG995-driven modular printed structure |
 | Upper arm | Lightweight ribbed PLA link |
-| Forearm | Revised printed forearm with improved clearance and routing space |
+| Forearm | Revised printed forearm with more clearance and routing space |
 | Wrist / gripper | MG90S-driven end-effector assembly |
-| Controller | Separate printed enclosure for five potentiometers and 16×2 LCD |
-| Manufacturing | Native SolidWorks files with STL exports for printable parts |
+| Controller | Separate printed enclosure for five potentiometers and a 16x2 LCD |
+| Manufacturing | SolidWorks source files with STL exports for printed parts |
 
 ## Final CAD Package
 
-The authoritative CAD is stored in [`Final-Package/`](./Final-Package/). It contains the completed mechanical assembly and the parts used for the finished build, including the arm links, shoulder mounts, base housing revisions, wrist/gripper components, bearing interfaces, and controller enclosure.
+The final CAD is stored in [`Final-Package/`](./Final-Package/). This is the version that matches the completed build and includes the arm links, shoulder mounts, base housing, wrist and gripper parts, bearing interfaces, and controller enclosure.
 
-The separate [`Slew-Bearing/`](./Slew-Bearing/) directory contains the final base-bearing geometry. The physical build uses **six steel balls**.
+The separate [`Slew-Bearing/`](./Slew-Bearing/) folder contains the base bearing geometry. The finished bearing uses **six steel balls**.
 
-Native filenames are intentionally preserved. Renaming referenced SolidWorks files outside SolidWorks can break assembly references.
+I kept the original SolidWorks filenames because renaming referenced parts outside SolidWorks can break the assembly.
 
-## Design Priorities
+## Main Design Priorities
 
-The final geometry reflects lessons from the physical build, with emphasis on:
+The final design focused on:
 
 - joint clearance
-- stiffness with reduced printed mass
-- servo and fastener access
-- bearing support
+- reducing printed mass without making the links too flexible
+- access to servos and fasteners
+- better base support
 - cable-routing space
-- printable split components
-- replaceable/serviceable subassemblies
-- consistent mechanical styling
+- parts that could be printed separately and replaced if needed
+- keeping the mechanical style consistent across the arm
 
-For the reasoning behind the redesigns, see [Design Evolution](../Design-Evolution/README.md).
+For the main redesigns and the problems that caused them, see [Design Evolution](../Design-Evolution/README.md).
