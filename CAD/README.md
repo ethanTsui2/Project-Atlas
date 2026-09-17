@@ -1,85 +1,79 @@
 # Atlas V1 CAD
 
-This folder contains the complete mechanical CAD design for **Project Atlas V1**, including the final assembly, reference components, and design resources used throughout development.
+This folder documents the final mechanical design of **Project Atlas V1**. The completed build was developed primarily in SolidWorks and manufactured with FDM 3D printing.
 
----
+## Final Assembly Views
 
-# Final Assembly
+| View | Preview |
+|---|---|
+| Isometric | ![Atlas V1 Isometric](Final-Assembly/Atlas-V1-Isometric.png) |
+| Side | ![Atlas V1 Side](Final-Assembly/Atlas-V1-Side.png) |
+| Top | ![Atlas V1 Top](Final-Assembly/Atlas-V1-Top.png) |
+| Extended | ![Atlas V1 Extended](Final-Assembly/Atlas-V1-Extended.png) |
 
-The current mechanical design is shown below.
+## Final Mechanical Architecture
 
-## Isometric View
+| Subsystem | Final approach |
+|---|---|
+| Base | Printed housing with bearing-supported rotating structure and separate slew-bearing solution |
+| Shoulder / main joints | MG995-driven modular printed joint structure |
+| Upper arm | Lightweight ribbed PLA link |
+| Forearm | Revised printed forearm with improved clearance and routing space |
+| Wrist / gripper | MG90S-driven end-effector assembly |
+| Controller | Separate printed enclosure for 5 potentiometers and 16×2 LCD |
+| Manufacturing | Native SolidWorks files + STL exports for printed parts |
 
-![Atlas V1 Isometric](Final-Assembly/Atlas-V1-Isometric.png)
+## Final CAD Package
 
----
+The final Pack-and-Go package supplied for the completed build contains the assembly and referenced parts needed to preserve SolidWorks relationships. Important files include:
 
-## Side View
+### Assemblies
 
-![Atlas V1 Side](Final-Assembly/Atlas-V1-Side.png)
+- `v3 assembly.SLDASM` — completed mechanical assembly
+- `Atlas-V1-Analysis-Assembly.SLDASM` — frozen assembly used for engineering analysis
 
----
+### Major printed parts
 
-## Top View
+- `Atlas-V1-Upper-Arm.SLDPRT`
+- `Atlas-V1-Forearm edit v2.SLDPRT`
+- `Atlas-V1-Shoulder-Mount-Left.SLDPRT`
+- `Atlas-V1-Shoulder-Mount-Right.SLDPRT`
+- `Atlas-V1-Base-Housing top.SLDPRT.SLDPRT`
+- `Atlas-V1-Base-Housing bottom.SLDPRT.SLDPRT`
+- `AJM-01  → Atlas Joint Module (MG995)final.SLDPRT`
+- wrist, gripper, bearing-holder, servo-lid, and servo-horn components
+- controller top, bottom, panel, and control-board geometry
 
-![Atlas V1 Top](Final-Assembly/Atlas-V1-Top.png)
+Matching STL exports are included for the printable parts where available.
 
----
+## Slew Bearing
 
-## Extended Configuration
+A separate slew-bearing package supports the final base redesign. It contains printable inner/outer race geometry, cage/race variants, and the Fusion 360 outer-race source. The physical build uses **six steel balls** in the base bearing.
 
-![Atlas V1 Folded](Final-Assembly/Atlas-V1-Extended.png)
+The slew-bearing files were kept separate from the SolidWorks Pack-and-Go package because they were developed as a separate bearing subsystem.
 
----
+## Source-File Handling
 
-# Mechanical Specifications
+Native SolidWorks filenames should be preserved when moving or re-uploading the final package. Renaming referenced `.SLDPRT` files outside SolidWorks can break assembly references.
 
-| Component | Description |
-|------------|-------------|
-| Degrees of Freedom | 5 DOF |
-| Base Servo | MG995 |
-| Shoulder Servo | MG995 |
-| Elbow Servo | MG995 |
-| Wrist Servo | MG90S |
-| Gripper Servo | MG90S |
-| CAD Software | SolidWorks |
-| Manufacturing | FDM 3D Printing |
+The repository therefore separates:
 
----
+- `Final-Assembly/` — quick visual references
+- `Source-Files/` — native CAD and assemblies
+- `Reference_Components/` — external servo/reference geometry
+- final STL exports — manufacturing files supplied with the final CAD package
 
-# Design Features
+## Design Priorities
 
-- Lightweight ribbed arm links
-- Modular servo housings
-- Split-print construction
-- Internal cable routing
-- Collision-checked assembly
-- Heat-set insert mounting
-- Serviceable servo covers
-- Modular gripper assembly
+The final geometry reflects the physical build, with emphasis on:
 
----
+- joint clearance
+- stiffness with reduced printed mass
+- servo and fastener access
+- bearing support
+- cable-routing space
+- printable split components
+- replaceable/serviceable subassemblies
+- consistent mechanical styling
 
-# Folder Contents
-
-```text
-CAD/
-├── Final-Assembly/
-│   └── Final CAD screenshots
-├── Source-Files/
-│   └── Native SolidWorks parts and assemblies
-├── Reference_Components/
-│   ├── MG995/
-│   └── MG90S/
-└── README.md
-│
-└── README.md
-```
-
-```markdown
-## Source Files
-
-The `Source-Files` directory contains the complete SolidWorks assembly and its referenced components.
-
-The files were exported using SolidWorks Pack and Go to preserve assembly references and reduce the chance of missing-part errors.
-
+For the reasoning behind the major redesigns, see [Design Evolution](../Design-Evolution/README.md).
