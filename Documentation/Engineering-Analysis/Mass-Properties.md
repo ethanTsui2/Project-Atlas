@@ -1,8 +1,8 @@
 # Atlas V1 Mass Inventory
 
-This table records the raw mass properties extracted directly from SolidWorks for the major Atlas V1 components.
+This table records the mass properties I pulled directly from SolidWorks for the main Atlas V1 components.
 
-The values represent the theoretical properties of the CAD model using the verified **Anycubic PLA V3.0** material. These measurements serve as the baseline dataset for the subsequent center-of-mass, torque, and finite element analyses.
+The values are based on the CAD model using the verified **Anycubic PLA V3.0** material. I used this data as the starting point for the center-of-mass, torque, and FEA work.
 
 | Component | Material | Mass (g) | Volume (mm³) | COM X (mm) | COM Y (mm) | COM Z (mm) | Evidence |
 |:----------|:--------:|---------:|-------------:|-----------:|-----------:|-----------:|:--------:|
@@ -13,8 +13,8 @@ The values represent the theoretical properties of the CAD model using the verif
 | Link 2 Structure | PLA | 164.24 | 132452.17 | 0.00 | 72.44 | -34.82 | [View](Images/Link-2-Mass-Properties.png) |
 | Complete End Effector | PLA |30.23 |24378.13 |410.32 | 894.39|1307.39 |[View](Images/End-Effector-Mass-Properties.png)|
 | **Purchased Components** |||||||||
-| Shoulder MG995 Servo | Manufacturer | 55  | | | | | |
-| Elbow MG995 Servo | Manufacturer |55  | | | | | |
+| Shoulder MG995 Servo | Manufacturer | 55 | | | | | |
+| Elbow MG995 Servo | Manufacturer | 55 | | | | | |
 | Wrist MG90S Servo | Manufacturer | 13.4 | | | | | |
 | Gripper MG90S Servo | Manufacturer | 13.4 | | | | | |
 | **Estimated Components** |||||||||
@@ -22,7 +22,7 @@ The values represent the theoretical properties of the CAD model using the verif
 | Wiring | Copper / PVC | | | | | | |
 | Payload (Design Target) | Variable | | | | | | |
 
-> **Note:** Printed component properties were extracted from SolidWorks using the verified Anycubic PLA material. Servo masses are based on manufacturer specifications and will be replaced with measured values in future hardware validation if available.
+> **Note:** Printed component values came from SolidWorks using the verified Anycubic PLA material. Servo masses are based on manufacturer specifications.
 
 ## Mass Summary
 
@@ -30,6 +30,6 @@ The values represent the theoretical properties of the CAD model using the verif
 |-----------|---------:|
 | Printed Components | **1338.90** |
 | Servos | **136.80** |
-| Estimated Hardware | — |
-| Estimated Wiring | — |
+| Estimated Hardware | - |
+| Estimated Wiring | - |
 | **Estimated Total Robot Mass** | **1475.70 + hardware** |
