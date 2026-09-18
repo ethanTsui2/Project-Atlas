@@ -14,11 +14,16 @@ This folder contains the final mechanical design files for Project Atlas V1.
 
 These are the most up-to-date CAD screenshots of the finished Atlas V1 assembly.
 
-| View | Preview |
-|---|---|
-| Isometric | ![Atlas V1 Isometric](Final-Assembly/Atlas-V1-Isometric.png) |
-| Side | ![Atlas V1 Side](Final-Assembly/Atlas-V1-Side.png) |
-| Top | ![Atlas V1 Top](Final-Assembly/Atlas-V1-Top.png) |
+<table>
+  <tr>
+    <td align="center"><b>Isometric</b><br><img src="Final-Assembly/Atlas-V1-Isometric.png" width="430"></td>
+    <td align="center"><b>Side</b><br><img src="Final-Assembly/Atlas-V1-Side.png" width="430"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Top</b><br><img src="Final-Assembly/Atlas-V1-Top.png" width="430"></td>
+    <td align="center"><b>Extended</b><br><img src="Final-Assembly/Atlas-V1-Extended.png" width="430"></td>
+  </tr>
+</table>
 
 ## Final Mechanical Setup
 
