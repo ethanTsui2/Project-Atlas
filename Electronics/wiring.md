@@ -84,3 +84,4 @@ Before applying power:
 
 - [Arduino Nano and potentiometer wiring](./Arduino%20Nano%20and%20potentiometer%20wiring.png)
 - [PCA9685 servo wiring](./PCA9685%20servo%20wiring.png)
+
