@@ -95,3 +95,4 @@ After building Atlas, physical testing led to more changes around the base suppo
 I kept the original analysis in the repo because it shows the reasoning I used before fabrication. Any future payload, backlash, accuracy, or repeatability numbers should come from physical testing rather than being estimated from these reports.
 
 [Return to project overview](../../README.md)
+
