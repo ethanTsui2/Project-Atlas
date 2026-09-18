@@ -96,6 +96,14 @@ The final build uses:
 - a 16x2 LCD
 - a metallic red painted finish
 
+This is the final CAD assembly after the last round of physical-test revisions.
+
+<p align="center">
+  <img src="../CAD/Final-Assembly/Atlas-V1-Isometric.png" alt="Final Atlas V1 CAD assembly" width="620">
+</p>
+
+The finished physical prototype is shown below.
+
 <p align="center">
   <img src="../docs/assets/atlas-photo.jpeg" alt="Completed Project Atlas V1" width="720">
 </p>
