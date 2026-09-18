@@ -61,3 +61,4 @@ See [Electronics](../Electronics/) for the wiring and power setup.
 ## Scope
 
 Atlas V1 uses direct manual joint control. It does not include closed-loop joint feedback, inverse kinematics, trajectory planning, or automatic motion sequencing.
+
